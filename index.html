@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arbiter HR — State-by-State Compliance References for HR Professionals</title>
+<meta name="description" content="State-by-state HR compliance references for all 50 states. Final pay deadlines, paid leave laws, pay transparency, wage garnishment, background check rules, and more. Built by a 15-year Total Rewards expert. Updated monthly at no charge.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & variables ───────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1B2E4B;
+  --navy-d:#111E30;
+  --navy-l:#243B60;
+  --amber:#F59E0B;
+  --amber-d:#D97706;
+  --white:#FFFFFF;
+  --off:#F8F7F5;
+  --text:#1B2E4B;
+  --muted:#5A7290;
+  --rule:#E2E8F0;
+  --red:#DC3545;
+  --serif:'DM Serif Display',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --max:1200px;
+  --r:6px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* ── Buttons ─────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:15px;padding:13px 28px;border-radius:var(--r);cursor:pointer;transition:all .18s;border:2px solid transparent;white-space:nowrap}
+.btn-primary{background:var(--amber);color:var(--navy);border-color:var(--amber)}
+.btn-primary:hover{background:var(--amber-d);border-color:var(--amber-d);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn-outline:hover{background:var(--navy);color:var(--white)}
+.btn-white{background:var(--white);color:var(--navy);border-color:var(--white)}
+.btn-white:hover{background:var(--off);border-color:var(--off)}
+.btn-outline-white{background:transparent;color:var(--white);border-color:rgba(255,255,255,.5)}
+.btn-outline-white:hover{background:rgba(255,255,255,.1);border-color:var(--white)}
+
+/* ── Nav ─────────────────────────────────────────────── */
+nav{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:3px solid var(--amber)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-logo{display:flex;align-items:center;gap:12px}
+.nav-logo svg{flex-shrink:0}
+.nav-wordmark{display:flex;flex-direction:column;line-height:1}
+.nav-wordmark .w1{font-family:var(--sans);font-weight:700;font-size:18px;color:var(--white);letter-spacing:.02em}
+.nav-wordmark .w2{font-family:var(--sans);font-weight:700;font-size:18px;color:var(--amber);letter-spacing:.02em}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:rgba(255,255,255,.75);transition:color .15s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{margin-left:8px}
+
+/* ── Hero ────────────────────────────────────────────── */
+.hero{background:var(--navy);padding:80px 0 72px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(245,158,11,.07) 0%,transparent 70%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);border-radius:100px;padding:6px 14px;font-size:12px;font-weight:600;color:var(--amber);letter-spacing:.06em;text-transform:uppercase;margin-bottom:28px}
+.hero h1{font-family:var(--serif);font-size:clamp(38px,4.5vw,58px);line-height:1.1;color:var(--white);margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--amber)}
+.hero-sub{font-size:18px;line-height:1.65;color:rgba(255,255,255,.7);margin-bottom:36px;max-width:520px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:32px;margin-top:48px;padding-top:40px;border-top:1px solid rgba(255,255,255,.1)}
+.hero-stat .n{font-family:var(--serif);font-size:32px;color:var(--amber)}
+.hero-stat .l{font-size:13px;color:rgba(255,255,255,.55);margin-top:2px}
+
+/* Email capture card in hero */
+.hero-card{background:var(--white);border-radius:12px;padding:32px;box-shadow:0 24px 64px rgba(0,0,0,.3)}
+.hero-card h3{font-family:var(--serif);font-size:22px;color:var(--navy);margin-bottom:8px}
+.hero-card p{font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6}
+.form-row{display:flex;flex-direction:column;gap:10px}
+.form-row input{width:100%;padding:12px 16px;border:1.5px solid var(--rule);border-radius:var(--r);font-family:var(--sans);font-size:14px;color:var(--text);outline:none;transition:border .15s}
+.form-row input:focus{border-color:var(--amber)}
+.form-row input::placeholder{color:#A0AEC0}
+.form-row .btn{width:100%;justify-content:center;padding:14px}
+.form-note{font-size:11px;color:#A0AEC0;margin-top:10px;text-align:center}
+.hero-card-divider{display:flex;align-items:center;gap:12px;margin:20px 0}
+.hero-card-divider::before,.hero-card-divider::after{content:'';flex:1;height:1px;background:var(--rule)}
+.hero-card-divider span{font-size:12px;color:#A0AEC0}
+
+/* ── Trust bar ───────────────────────────────────────── */
+.trust{background:var(--off);border-bottom:1px solid var(--rule);padding:20px 0}
+.trust-inner{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--muted)}
+.trust-item svg{color:var(--amber);flex-shrink:0}
+.trust-dot{width:4px;height:4px;background:var(--rule);border-radius:50%}
+
+/* ── Section headers ─────────────────────────────────── */
+.section{padding:80px 0}
+.section-alt{background:var(--off)}
+.section-navy{background:var(--navy)}
+.section-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:12px}
+.section-label.dark{color:var(--amber)}
+.section-h{font-family:var(--serif);font-size:clamp(30px,3.5vw,42px);color:var(--navy);line-height:1.15;margin-bottom:16px}
+.section-h.white{color:var(--white)}
+.section-sub{font-size:17px;color:var(--muted);line-height:1.65;max-width:560px}
+.section-sub.white{color:rgba(255,255,255,.7)}
+.section-header{margin-bottom:52px}
+
+/* ── How it works ────────────────────────────────────── */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.step{position:relative}
+.step-num{font-family:var(--serif);font-size:64px;color:var(--amber);opacity:.2;line-height:1;margin-bottom:-16px}
+.step h4{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.step p{font-size:14px;color:var(--muted);line-height:1.65}
+.step-connector{position:absolute;top:32px;right:-20px;width:40px;height:2px;background:var(--rule);display:none}
+
+/* ── Featured products ───────────────────────────────── */
+.featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.featured-card{background:var(--navy);border-radius:10px;padding:36px;position:relative;overflow:hidden}
+.featured-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--amber)}
+.featured-tag{display:inline-block;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:var(--amber);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:16px}
+.featured-card h3{font-family:var(--serif);font-size:24px;color:var(--white);margin-bottom:10px;line-height:1.2}
+.featured-card p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.65;margin-bottom:24px}
+.featured-price{font-family:var(--serif);font-size:36px;color:var(--amber);margin-bottom:20px}
+.featured-price span{font-size:16px;color:rgba(255,255,255,.4);font-family:var(--sans);font-weight:400;margin-left:4px}
+
+/* ── Products grid ───────────────────────────────────── */
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.product-card{background:var(--white);border:1.5px solid var(--rule);border-radius:10px;padding:28px;transition:all .2s;position:relative;display:flex;flex-direction:column}
+.product-card:hover{border-color:var(--amber);transform:translateY(-2px);box-shadow:0 8px 32px rgba(27,46,75,.1)}
+.product-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--rule);border-radius:10px 10px 0 0;transition:background .2s}
+.product-card:hover::before{background:var(--amber)}
+.product-num{font-size:11px;font-weight:700;color:var(--amber);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+.product-card h3{font-size:16px;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:10px;flex:1}
+.product-card p{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:20px}
+.product-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+.product-price{font-family:var(--serif);font-size:24px;color:var(--navy)}
+.product-link{font-size:13px;font-weight:600;color:var(--amber);display:flex;align-items:center;gap:4px}
+.product-link:hover{gap:8px}
+.product-update{font-size:11px;color:#A0AEC0;margin-top:8px}
+
+/* ── Bundles ─────────────────────────────────────────── */
+.bundles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.bundle-card{border-radius:10px;border:1.5px solid var(--rule);overflow:hidden;transition:all .2s;background:var(--white)}
+.bundle-card:hover{border-color:var(--amber);transform:translateY(-2px);box-shadow:0 8px 32px rgba(27,46,75,.1)}
+.bundle-card.featured-bundle{border-color:var(--amber)}
+.bundle-head{padding:28px 28px 20px;border-bottom:1px solid var(--rule)}
+.bundle-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;margin-bottom:12px;background:rgba(245,158,11,.12);color:var(--amber)}
+.bundle-card h3{font-family:var(--serif);font-size:20px;color:var(--navy);margin-bottom:6px;line-height:1.2}
+.bundle-card .bundle-sub{font-size:13px;color:var(--muted);line-height:1.5}
+.bundle-body{padding:20px 28px}
+.bundle-product{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--rule);font-size:13px}
+.bundle-product:last-child{border-bottom:none}
+.bundle-product .name{color:var(--text);font-weight:500}
+.bundle-product .price{color:var(--muted)}
+.bundle-price-row{padding:20px 28px;background:var(--navy);display:flex;align-items:center;justify-content:space-between}
+.bundle-was{font-size:13px;color:rgba(255,255,255,.4);text-decoration:line-through}
+.bundle-now{font-family:var(--serif);font-size:28px;color:var(--white)}
+.bundle-save{font-size:11px;font-weight:700;background:var(--red);color:var(--white);padding:3px 10px;border-radius:4px}
+.bundle-cta{padding:16px 28px}
+.bundle-cta .btn{width:100%;justify-content:center}
+
+/* ── Email section ───────────────────────────────────── */
+.email-section{background:var(--navy);padding:80px 0}
+.email-inner{display:grid;grid-template-columns:1fr 480px;gap:80px;align-items:center}
+.email-form-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:36px}
+.email-form-row{display:flex;flex-direction:column;gap:10px}
+.email-form-row input{width:100%;padding:13px 16px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);border-radius:var(--r);font-family:var(--sans);font-size:14px;color:var(--white);outline:none;transition:border .15s}
+.email-form-row input:focus{border-color:var(--amber)}
+.email-form-row input::placeholder{color:rgba(255,255,255,.35)}
+.email-form-row .btn{width:100%;justify-content:center;padding:14px}
+.email-note{font-size:11px;color:rgba(255,255,255,.35);margin-top:10px;text-align:center}
+.email-features{display:flex;flex-direction:column;gap:16px;margin-top:28px}
+.email-feature{display:flex;align-items:flex-start;gap:12px}
+.email-feature-icon{width:36px;height:36px;border-radius:50%;background:rgba(245,158,11,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.email-feature h5{font-size:14px;font-weight:600;color:var(--white);margin-bottom:2px}
+.email-feature p{font-size:13px;color:rgba(255,255,255,.55);line-height:1.5}
+
+/* ── About ───────────────────────────────────────────── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-expertise{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:36px}
+.expertise-chip{background:var(--off);border:1px solid var(--rule);border-radius:var(--r);padding:12px 16px;font-size:13px;font-weight:500;color:var(--navy);display:flex;align-items:center;gap:8px}
+.expertise-chip::before{content:'';width:3px;height:100%;background:var(--amber);border-radius:2px;flex-shrink:0}
+.about-quote{background:var(--navy);border-radius:12px;padding:40px;position:relative}
+.about-quote::before{content:'"';font-family:var(--serif);font-size:120px;color:var(--amber);opacity:.15;position:absolute;top:-20px;left:24px;line-height:1}
+.about-quote blockquote{font-family:var(--serif);font-size:20px;color:var(--white);line-height:1.5;position:relative;z-index:1;font-style:italic;margin-bottom:20px}
+.about-quote-attr{font-size:13px;color:rgba(255,255,255,.5)}
+.about-quote-attr strong{color:var(--amber);display:block;font-weight:600}
+
+/* ── Footer ──────────────────────────────────────────── */
+footer{background:var(--navy-d);padding:48px 0 32px;border-top:3px solid var(--amber)}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-col h5{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px}
+.footer-col a,.footer-col p{font-size:13px;color:rgba(255,255,255,.55);display:block;margin-bottom:8px;transition:color .15s}
+.footer-col a:hover{color:var(--white)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:28px;border-top:1px solid rgba(255,255,255,.08);flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:12px;color:rgba(255,255,255,.35)}
+.footer-logo{display:flex;align-items:center;gap:10px}
+.footer-logo span{font-weight:700;font-size:14px;color:rgba(255,255,255,.6)}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media(max-width:900px){
+  .hero-grid,.featured-grid,.about-grid,.email-inner{grid-template-columns:1fr}
+  .hero-card{display:none}
+  .steps{grid-template-columns:1fr}
+  .bundles-grid{grid-template-columns:1fr}
+  .products-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+}
+@media(max-width:600px){
+  .products-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .trust-inner{gap:20px}
+  .about-expertise{grid-template-columns:1fr}
+}
+
+/* ── Animations ──────────────────────────────────────── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp .5s ease both}
+.delay-1{animation-delay:.1s}
+.delay-2{animation-delay:.2s}
+.delay-3{animation-delay:.3s}
+</style>
+  <!-- SEO & Open Graph -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Arbiter HR">
+  <meta name="keywords" content="HR compliance, state employment law, final pay requirements, paid leave laws, pay transparency, wage garnishment, HR reference, payroll compliance, multi-state HR, employment law by state">
+  <link rel="canonical" href="https://arbiterhr.com">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Arbiter HR">
+  <meta property="og:url" content="https://arbiterhr.com">
+  <meta property="og:title" content="Arbiter HR — State-by-State Compliance References for HR Professionals">
+  <meta property="og:description" content="All 50 state compliance references for HR and payroll professionals. Final pay, paid leave, pay transparency, garnishment, and more. Built by a 15-year Total Rewards expert. Updated monthly.">
+  <meta property="og:image" content="https://arbiterhr.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Arbiter HR — HR Compliance References for All 50 States">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@arbiterhr">
+  <meta name="twitter:title" content="Arbiter HR — HR Compliance References for All 50 States">
+  <meta name="twitter:description" content="State-by-state compliance workbooks for HR professionals. Final pay, paid leave, pay transparency, garnishment rules, and more. Updated monthly, free forever.">
+  <meta name="twitter:image" content="https://arbiterhr.com/og-image.png">
+
+  <!-- Structured data — Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Arbiter HR",
+    "url": "https://arbiterhr.com",
+    "logo": "https://arbiterhr.com/logo.png",
+    "description": "State-by-state HR compliance references built by a 15-year Total Rewards expert. All 50 states, updated monthly.",
+    "email": "brittany@arbiterhr.com",
+    "sameAs": ["https://arbiterhr.gumroad.com"]
+  }
+  </script>
+
+  <!-- Structured data — Product catalog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Arbiter HR Compliance References",
+    "description": "State-by-state HR and payroll compliance workbooks for all 50 states",
+    "itemListElement": [
+      {
+        "@type": "ListItem", "position": 1,
+        "item": {
+          "@type": "Product",
+          "name": "Final Pay & Termination Requirements — All 50 States",
+          "description": "State final pay deadlines, PTO payout rules, documentation requirements, and penalty exposure for all 50 states.",
+          "url": "https://arbiterhr.gumroad.com/l/final-pay-termination-requirements-all-50-states",
+          "brand": {"@type": "Brand", "name": "Arbiter HR"},
+          "offers": {"@type": "Offer", "price": "37.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}
+        }
+      },
+      {
+        "@type": "ListItem", "position": 2,
+        "item": {
+          "@type": "Product",
+          "name": "Paid Leave Laws by State — All 50 States",
+          "description": "State paid leave requirements, employer thresholds, benefit amounts, and contribution rates.",
+          "url": "https://arbiterhr.gumroad.com/l/paid-leave-laws-by-state",
+          "brand": {"@type": "Brand", "name": "Arbiter HR"},
+          "offers": {"@type": "Offer", "price": "27.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}
+        }
+      },
+      {
+        "@type": "ListItem", "position": 3,
+        "item": {
+          "@type": "Product",
+          "name": "Pay Transparency Laws by State — All 50 States",
+          "description": "State salary disclosure requirements, job posting rules, remote candidate coverage, and penalty amounts.",
+          "url": "https://arbiterhr.gumroad.com/l/pay-transparency-laws-by-state",
+          "brand": {"@type": "Brand", "name": "Arbiter HR"},
+          "offers": {"@type": "Offer", "price": "27.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}
+        }
+      },
+      {
+        "@type": "ListItem", "position": 4,
+        "item": {
+          "@type": "Product",
+          "name": "Background & Credit Check Restrictions by State",
+          "description": "Ban the Box laws, credit check restrictions, adverse action requirements, and city-level rules.",
+          "url": "https://arbiterhr.gumroad.com/l/background-check-restrictions-by-state",
+          "brand": {"@type": "Brand", "name": "Arbiter HR"},
+          "offers": {"@type": "Offer", "price": "27.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}
+        }
+      },
+      {
+        "@type": "ListItem", "position": 5,
+        "item": {
+          "@type": "Product",
+          "name": "Non-Compete Laws by State — All 50 States",
+          "description": "Post-FTC ruling state enforceability, salary thresholds, and required provisions for non-compete agreements.",
+          "url": "https://arbiterhr.gumroad.com/l/non-compete-laws-by-state",
+          "brand": {"@type": "Brand", "name": "Arbiter HR"},
+          "offers": {"@type": "Offer", "price": "27.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}
+        }
+      },
+      {
+        "@type": "ListItem", "position": 6,
+        "item": {
+          "@type": "Product",
+          "name": "Meal & Rest Break Requirements by State",
+          "description": "State break mandates, duration, timing, paid vs unpaid rules, industry exemptions, and penalty reference.",
+          "url": "https://arbiterhr.gumroad.com/l/meal-rest-break-requirements-by-state",
+          "brand": {"@type": "Brand", "name": "Arbiter HR"},
+          "offers": {"@type": "Offer", "price": "27.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}
+        }
+      },
+      {
+        "@type": "ListItem", "position": 7,
+        "item": {
+          "@type": "Product",
+          "name": "Predictive Scheduling Laws — States & Cities",
+          "description": "Advance notice requirements, predictability pay, right to rest, and access to hours rules across 8 jurisdictions.",
+          "url": "https://arbiterhr.gumroad.com/l/predictive-scheduling-laws-states-cities",
+          "brand": {"@type": "Brand", "name": "Arbiter HR"},
+          "offers": {"@type": "Offer", "price": "27.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}
+        }
+      },
+      {
+        "@type": "ListItem", "position": 8,
+        "item": {
+          "@type": "Product",
+          "name": "New Hire Reporting Requirements by State",
+          "description": "State reporting deadlines, contractor reporting obligations, and multi-state employer rules.",
+          "url": "https://arbiterhr.gumroad.com/l/new-hire-reporting-requirements-by-state",
+          "brand": {"@type": "Brand", "name": "Arbiter HR"},
+          "offers": {"@type": "Offer", "price": "27.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}
+        }
+      },
+      {
+        "@type": "ListItem", "position": 9,
+        "item": {
+          "@type": "Product",
+          "name": "Payroll Tax & Wage Garnishment Rules by State",
+          "description": "CCPA limits, state exemptions, garnishment priority order, IRS levy worksheet, and child support calculations.",
+          "url": "https://arbiterhr.gumroad.com/l/payroll-tax-wage-garnishment-rules-by-state",
+          "brand": {"@type": "Brand", "name": "Arbiter HR"},
+          "offers": {"@type": "Offer", "price": "37.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ── NAV ────────────────────────────────────────────── -->
+<nav>
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">
+      <svg width="36" height="44" viewBox="0 0 36 44" fill="none">
+        <circle cx="18" cy="16" r="14" fill="#F59E0B"/>
+        <circle cx="18" cy="16" r="5" fill="#1B2E4B"/>
+        <path d="M12 27 L18 44 L24 27" fill="#F59E0B"/>
+      </svg>
+      <div class="nav-wordmark">
+        <span class="w1">ARBITER</span>
+        <span class="w2">HR</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#products">Products</a>
+      <a href="#bundles">Bundles</a>
+      <a href="#about">About</a>
+      <a href="mailto:brittany@arbiterhr.com">Contact</a>
+    </div>
+    <a href="#products" class="btn btn-primary nav-cta">Browse References →</a>
+  </div>
+</nav>
+
+<!-- ── HERO ───────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="fade-up">
+        <div class="hero-badge">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="6"/></svg>
+          Updated monthly — no additional purchase
+        </div>
+        <h1>The compliance reference<br><em>HR professionals</em><br>actually reach for.</h1>
+        <p class="hero-sub">State-by-state compliance workbooks for every high-stakes HR moment — from the termination meeting to the garnishment order. All 50 states. Built by a 15-year Total Rewards expert.</p>
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-primary">Browse All References →</a>
+          <a href="#bundles" class="btn btn-outline-white">View Bundles</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="n">50</div><div class="l">States covered</div></div>
+          <div class="hero-stat"><div class="n">10</div><div class="l">Reference topics</div></div>
+          <div class="hero-stat"><div class="n">15+</div><div class="l">Years expertise</div></div>
+          <div class="hero-stat"><div class="n">Monthly</div><div class="l">Free updates</div></div>
+        </div>
+      </div>
+
+      <!-- Email capture card -->
+      <div class="hero-card fade-up delay-2">
+        <h3>Stay ahead of state law changes.</h3>
+        <p>Get notified when laws change in your states. Monthly compliance alerts, no noise.</p>
+        <!-- KIT FORM: Replace action URL with your Kit embed URL -->
+        <form action="#" method="post" class="form-row">
+          <input type="text" name="first_name" placeholder="First name">
+          <input type="email" name="email_address" placeholder="Work email" required>
+          <button type="submit" class="btn btn-primary">Get compliance alerts →</button>
+          <p class="form-note">Free. Unsubscribe anytime. No spam — ever.</p>
+        </form>
+        <div class="hero-card-divider"><span>or</span></div>
+        <a href="#products" class="btn btn-outline" style="width:100%;justify-content:center">Browse products first</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRUST BAR ───────────────────────────────────────── -->
+<div class="trust">
+  <div class="container trust-inner">
+    <div class="trust-item">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1L10 6H15L11 9.5L12.5 15L8 12L3.5 15L5 9.5L1 6H6L8 1Z" fill="#F59E0B"/></svg>
+      Seasoned Total Rewards Leader
+    </div>
+    <div class="trust-dot"></div>
+    <div class="trust-item">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="#F59E0B" stroke-width="1.5"/><path d="M5 8L7 10L11 6" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round"/></svg>
+      15+ Years Multi-State Payroll & HR
+    </div>
+    <div class="trust-dot"></div>
+    <div class="trust-item">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#F59E0B" stroke-width="1.5"/><path d="M8 5V8L10 10" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round"/></svg>
+      Updated monthly — free forever
+    </div>
+    <div class="trust-dot"></div>
+    <div class="trust-item">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4L8 2L14 4V9C14 12 11 14.5 8 15C5 14.5 2 12 2 9V4Z" stroke="#F59E0B" stroke-width="1.5"/></svg>
+      Single-user license · Excel 2007+
+    </div>
+  </div>
+</div>
+
+<!-- ── HOW IT WORKS ────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">How it works</div>
+      <h2 class="section-h">From question to answer<br>in under a minute.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h4>Find your topic</h4>
+        <p>Choose the reference that matches your compliance question — final pay, leave, garnishment, background checks, and more.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h4>Download instantly</h4>
+        <p>One-time purchase. No subscription, no account. Your Excel workbook downloads immediately and works offline.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h4>Reference with confidence</h4>
+        <p>Look up your state, get the rule, cite the statute. Built for the moment you need a fast, accurate answer — not a research session.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURED PRODUCTS ───────────────────────────────── -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Most critical references</div>
+      <h2 class="section-h">Start here if you're managing<br>terminations or payroll.</h2>
+      <p class="section-sub">Two topics where getting it wrong creates immediate financial and legal exposure — for the employer personally.</p>
+    </div>
+    <div class="featured-grid">
+      <div class="featured-card">
+        <div class="featured-tag">⚡ Highest stakes</div>
+        <h3>Final Pay & Termination Requirements</h3>
+        <p>Know your state's deadline before the termination meeting. Covers all separation types, PTO payout rules, required documentation, and penalty exposure. All 50 states, risk-coded by severity.</p>
+        <div class="featured-price">$37 <span>one-time</span></div>
+        <!-- Product 1 -->
+        <a href="https://arbiterhr.gumroad.com/l/final-pay-termination-requirements-all-50-states" target="_blank" class="btn btn-primary">Download reference →</a>
+      </div>
+      <div class="featured-card">
+        <div class="featured-tag">⚡ Highest stakes</div>
+        <h3>Payroll Tax & Wage Garnishment Rules</h3>
+        <p>Ignore a garnishment order and you become personally liable for the full amount. Covers CCPA limits, state exemptions, priority rules, IRS levy worksheet, and child support calculations.</p>
+        <div class="featured-price">$37 <span>one-time</span></div>
+        <!-- Product 9 -->
+        <a href="https://arbiterhr.gumroad.com/l/payroll-tax-wage-garnishment-rules-by-state" target="_blank" class="btn btn-primary">Download reference →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRODUCTS GRID ───────────────────────────────────── -->
+<section class="section" id="products">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">All references</div>
+      <h2 class="section-h">10 compliance topics.<br>All 50 states. One expert.</h2>
+      <p class="section-sub">Every reference is updated monthly as laws change — included in your purchase at no extra charge.</p>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-num">Product 01</div>
+        <h3>Final Pay & Termination Requirements — All 50 States</h3>
+        <p>State deadlines, PTO payout rules, documentation requirements, and penalty exposure by state.</p>
+        <div class="product-footer">
+          <div>
+            <div class="product-price">$37</div>
+            <div class="product-update">Updated monthly · free</div>
+          </div>
+          <a href="https://arbiterhr.gumroad.com/l/final-pay-termination-requirements-all-50-states" target="_blank" class="product-link">Get it →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-num">Product 02</div>
+        <h3>Paid Leave Laws by State — All 50 States</h3>
+        <p>22 states mandate paid leave. Employer thresholds, benefit amounts, contribution rates, and upcoming laws.</p>
+        <div class="product-footer">
+          <div>
+            <div class="product-price">$27</div>
+            <div class="product-update">Updated monthly · free</div>
+          </div>
+          <a href="https://arbiterhr.gumroad.com/l/paid-leave-laws-by-state" target="_blank" class="product-link">Get it →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-num">Product 03</div>
+        <h3>Pay Transparency Laws by State — All 50 States</h3>
+        <p>14 states require salary ranges in job postings. Disclosure rules, remote coverage, and penalty amounts.</p>
+        <div class="product-footer">
+          <div>
+            <div class="product-price">$27</div>
+            <div class="product-update">Updated monthly · free</div>
+          </div>
+          <a href="https://arbiterhr.gumroad.com/l/pay-transparency-laws-by-state" target="_blank" class="product-link">Get it →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-num">Product 04</div>
+        <h3>Background & Credit Check Restrictions by State</h3>
+        <p>Ban the Box laws, credit check restrictions, adverse action requirements, and key city-level rules.</p>
+        <div class="product-footer">
+          <div>
+            <div class="product-price">$27</div>
+            <div class="product-update">Updated monthly · free</div>
+          </div>
+          <a href="https://arbiterhr.gumroad.com/l/background-check-restrictions-by-state" target="_blank" class="product-link">Get it →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-num">Product 05</div>
+        <h3>Non-Compete Laws by State — All 50 States</h3>
+        <p>The FTC ban was struck down. Post-ruling enforceability, salary thresholds, and required provisions by state.</p>
+        <div class="product-footer">
+          <div>
+            <div class="product-price">$27</div>
+            <div class="product-update">Updated monthly · free</div>
+          </div>
+          <a href="https://arbiterhr.gumroad.com/l/non-compete-laws-by-state" target="_blank" class="product-link">Get it →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-num">Product 06</div>
+        <h3>Meal & Rest Break Requirements by State</h3>
+        <p>29 states mandate breaks. Duration, timing, paid vs unpaid, industry exemptions, and penalty reference.</p>
+        <div class="product-footer">
+          <div>
+            <div class="product-price">$27</div>
+            <div class="product-update">Updated monthly · free</div>
+          </div>
+          <a href="https://arbiterhr.gumroad.com/l/meal-rest-break-requirements-by-state" target="_blank" class="product-link">Get it →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-num">Product 07</div>
+        <h3>Predictive Scheduling Laws — States & Cities</h3>
+        <p>8 jurisdictions require advance notice of schedules. Predictability pay, right to rest, and access to hours rules.</p>
+        <div class="product-footer">
+          <div>
+            <div class="product-price">$27</div>
+            <div class="product-update">Updated monthly · free</div>
+          </div>
+          <a href="https://arbiterhr.gumroad.com/l/predictive-scheduling-laws-states-cities" target="_blank" class="product-link">Get it →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-num">Product 08</div>
+        <h3>New Hire Reporting Requirements by State</h3>
+        <p>Every new hire must be reported. State deadlines, contractor reporting, and multi-state employer rules.</p>
+        <div class="product-footer">
+          <div>
+            <div class="product-price">$27</div>
+            <div class="product-update">Updated monthly · free</div>
+          </div>
+          <a href="https://arbiterhr.gumroad.com/l/new-hire-reporting-requirements-by-state" target="_blank" class="product-link">Get it →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-num">Product 09</div>
+        <h3>Payroll Tax & Wage Garnishment Rules by State</h3>
+        <p>CCPA limits, state exemptions, garnishment priority order, IRS levy worksheet, and child support calculations.</p>
+        <div class="product-footer">
+          <div>
+            <div class="product-price">$37</div>
+            <div class="product-update">Updated monthly · free</div>
+          </div>
+          <a href="https://arbiterhr.gumroad.com/l/payroll-tax-wage-garnishment-rules-by-state" target="_blank" class="product-link">Get it →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-num">Product 10 <span style="font-size:10px;background:#FEF3C7;color:#92400E;padding:2px 6px;border-radius:4px;margin-left:4px;font-weight:700">LIVE TOMORROW</span></div>
+        <h3>Benefits Compliance Calendar — Annual Deadlines</h3>
+        <p>40+ federal deadlines mapped across the year. ACA, COBRA, ERISA, notice requirements, and state mandates.</p>
+        <div class="product-footer">
+          <div>
+            <div class="product-price">$27</div>
+            <div class="product-update">Annual edition · free updates</div>
+          </div>
+          <span class="product-link" style="color:var(--muted);cursor:default;gap:0">Available tomorrow</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── BUNDLES ─────────────────────────────────────────── -->
+<section class="section section-alt" id="bundles">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Bundles</div>
+      <h2 class="section-h">Buy the set that fits<br>your role.</h2>
+      <p class="section-sub">Three curated bundles — one for payroll administrators, one for HR generalists, and one complete library.</p>
+    </div>
+    <div class="bundles-grid">
+
+      <div class="bundle-card">
+        <div class="bundle-head">
+          <div class="bundle-badge">3 products</div>
+          <h3>Payroll Admin Essentials</h3>
+          <div class="bundle-sub">Three references for the highest-stakes payroll compliance moments.</div>
+        </div>
+        <div class="bundle-body">
+          <div class="bundle-product"><span class="name">#1 Final Pay & Termination</span><span class="price">$37</span></div>
+          <div class="bundle-product"><span class="name">#6 Meal & Rest Break Rules</span><span class="price">$27</span></div>
+          <div class="bundle-product"><span class="name">#9 Tax & Wage Garnishment</span><span class="price">$37</span></div>
+        </div>
+        <div class="bundle-price-row">
+          <div>
+            <div class="bundle-was">$101 individually</div>
+            <div class="bundle-now">$74</div>
+          </div>
+          <div class="bundle-save">SAVE $27</div>
+        </div>
+        <div class="bundle-cta">
+          <a href="#" class="btn btn-outline">Get bundle →</a><!-- GUMROAD LINK -->
+        </div>
+      </div>
+
+      <div class="bundle-card featured-bundle">
+        <div class="bundle-head">
+          <div class="bundle-badge">5 products</div>
+          <h3>HR Generalist Essentials</h3>
+          <div class="bundle-sub">Every compliance checkpoint from job posting to first leave request.</div>
+        </div>
+        <div class="bundle-body">
+          <div class="bundle-product"><span class="name">#2 Paid Leave Laws</span><span class="price">$27</span></div>
+          <div class="bundle-product"><span class="name">#3 Pay Transparency</span><span class="price">$27</span></div>
+          <div class="bundle-product"><span class="name">#4 Background Checks</span><span class="price">$27</span></div>
+          <div class="bundle-product"><span class="name">#5 Non-Compete Laws</span><span class="price">$27</span></div>
+          <div class="bundle-product"><span class="name">#8 New Hire Reporting</span><span class="price">$27</span></div>
+        </div>
+        <div class="bundle-price-row">
+          <div>
+            <div class="bundle-was">$135 individually</div>
+            <div class="bundle-now">$97</div>
+          </div>
+          <div class="bundle-save">SAVE $38</div>
+        </div>
+        <div class="bundle-cta">
+          <a href="#" class="btn btn-primary">Get bundle →</a><!-- GUMROAD LINK -->
+        </div>
+      </div>
+
+      <div class="bundle-card">
+        <div class="bundle-head">
+          <div class="bundle-badge">All 10 products</div>
+          <h3>The Essential Reference Guide for HR Professionals</h3>
+          <div class="bundle-sub">Every compliance reference your team needs. One price.</div>
+        </div>
+        <div class="bundle-body">
+          <div class="bundle-product"><span class="name">Products #1–5</span><span class="price">—</span></div>
+          <div class="bundle-product"><span class="name">Products #6–10</span><span class="price">—</span></div>
+          <div class="bundle-product"><span class="name">All 50 states covered</span><span class="price">—</span></div>
+          <div class="bundle-product"><span class="name">Free monthly updates</span><span class="price">—</span></div>
+          <div class="bundle-product"><span class="name">Single .zip download</span><span class="price">—</span></div>
+        </div>
+        <div class="bundle-price-row">
+          <div>
+            <div class="bundle-was">$290 individually</div>
+            <div class="bundle-now">$197</div>
+          </div>
+          <div class="bundle-save">SAVE $93</div>
+        </div>
+        <div class="bundle-cta">
+          <a href="#" class="btn btn-outline">Get the library →</a><!-- GUMROAD LINK -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── EMAIL CAPTURE ───────────────────────────────────── -->
+<section class="email-section" id="subscribe">
+  <div class="container email-inner">
+    <div>
+      <div class="section-label dark">Free compliance alerts</div>
+      <h2 class="section-h white">Laws change.<br>Know before<br>they affect you.</h2>
+      <p class="section-sub white" style="margin-top:16px">Monthly updates on the state compliance changes that matter most to HR and payroll professionals. No noise — only what changed and what it means for you.</p>
+      <div class="email-features">
+        <div class="email-feature">
+          <div class="email-feature-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#F59E0B" stroke-width="1.5"/><path d="M8 5V8L10 10" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h5>Monthly law change digest</h5>
+            <p>New and updated state laws, effective dates, and what HR teams need to do differently.</p>
+          </div>
+        </div>
+        <div class="email-feature">
+          <div class="email-feature-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4L8 2L14 4V9C14 12 11 14.5 8 15C5 14.5 2 12 2 9V4Z" stroke="#F59E0B" stroke-width="1.5"/></svg>
+          </div>
+          <div>
+            <h5>Product update notices</h5>
+            <p>When any of your purchased workbooks are updated, you'll know exactly what changed.</p>
+          </div>
+        </div>
+        <div class="email-feature">
+          <div class="email-feature-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="#F59E0B" stroke-width="1.5"/><path d="M5 8L7 10L11 6" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h5>Early access to new topics</h5>
+            <p>Subscribers get first access to new reference workbooks before public launch.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="email-form-card">
+      <h3 style="font-family:var(--serif);font-size:22px;color:var(--white);margin-bottom:8px">Get the monthly digest.</h3>
+      <p style="font-size:14px;color:rgba(255,255,255,.5);margin-bottom:24px;line-height:1.6">Join HR and payroll professionals who stay ahead of state law changes.</p>
+      <!-- KIT FORM: Replace action URL with your Kit embed URL -->
+      <form action="#" method="post" class="email-form-row">
+        <input type="text" name="first_name" placeholder="First name">
+        <input type="email" name="email_address" placeholder="Work email" required>
+        <button type="submit" class="btn btn-primary">Subscribe — it's free →</button>
+        <p class="email-note">No spam. Unsubscribe anytime. Your email is never shared.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ───────────────────────────────────────────── -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="section-label">About</div>
+        <h2 class="section-h">Not a summary.<br>A working reference.</h2>
+        <p style="font-size:16px;color:var(--muted);line-height:1.7;margin-top:16px">Arbiter HR is built by a seasoned Total Rewards leader with 15+ years as a subject matter expert in multi-state payroll, wage & hour compliance, benefits administration, HR audits, HRIS, and employment law.</p>
+        <p style="font-size:16px;color:var(--muted);line-height:1.7;margin-top:16px">These aren't paralegal summaries or compliance overviews. They're the references a working HR professional builds over years of managing real compliance questions — organized so you can find the answer before the meeting starts.</p>
+        <div class="about-expertise">
+          <div class="expertise-chip">Multi-state payroll</div>
+          <div class="expertise-chip">Wage & hour compliance</div>
+          <div class="expertise-chip">Benefits administration</div>
+          <div class="expertise-chip">HR audits & HRIS</div>
+          <div class="expertise-chip">Employment law</div>
+          <div class="expertise-chip">Total Rewards strategy</div>
+        </div>
+      </div>
+      <div>
+        <div class="about-quote">
+          <blockquote>"Built for small HR teams doing big-company work."</blockquote>
+          <div class="about-quote-attr">
+            <strong>Arbiter HR</strong>
+            HR compliance references for practitioners — not observers.
+          </div>
+        </div>
+        <div style="margin-top:24px;background:var(--off);border-radius:10px;padding:24px;border:1px solid var(--rule)">
+          <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:12px;text-transform:uppercase;letter-spacing:.06em">Every reference includes</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;gap:10px;font-size:13px;color:var(--muted)"><span style="color:var(--amber);font-weight:700">✓</span> All 50 states in one workbook</div>
+            <div style="display:flex;gap:10px;font-size:13px;color:var(--muted)"><span style="color:var(--amber);font-weight:700">✓</span> Free monthly updates — forever</div>
+            <div style="display:flex;gap:10px;font-size:13px;color:var(--muted)"><span style="color:var(--amber);font-weight:700">✓</span> Excel 2007+ / Google Sheets compatible</div>
+            <div style="display:flex;gap:10px;font-size:13px;color:var(--muted)"><span style="color:var(--amber);font-weight:700">✓</span> Statute citations included</div>
+            <div style="display:flex;gap:10px;font-size:13px;color:var(--muted)"><span style="color:var(--amber);font-weight:700">✓</span> Risk-coded for fast scanning</div>
+            <div style="display:flex;gap:10px;font-size:13px;color:var(--muted)"><span style="color:var(--amber);font-weight:700">✓</span> One-time purchase, no subscription</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo" style="margin-bottom:16px">
+          <svg width="28" height="36" viewBox="0 0 28 36" fill="none">
+            <circle cx="14" cy="13" r="11" fill="#F59E0B"/>
+            <circle cx="14" cy="13" r="4" fill="#1B2E4B"/>
+            <path d="M9 22L14 36L19 22" fill="#F59E0B"/>
+          </svg>
+          <span>ARBITER HR</span>
+        </div>
+        <p style="color:rgba(255,255,255,.4);font-size:13px;line-height:1.65">Built for small HR teams doing big-company work.</p>
+        <p style="color:rgba(255,255,255,.4);font-size:13px;margin-top:12px">
+          <a href="mailto:brittany@arbiterhr.com" style="color:rgba(255,255,255,.55)">brittany@arbiterhr.com</a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <a href="#">Final Pay & Termination</a>
+        <a href="#">Paid Leave Laws</a>
+        <a href="#">Pay Transparency</a>
+        <a href="#">Background Checks</a>
+        <a href="#">Non-Compete Laws</a>
+        <a href="#">View all 10 references →</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#about">About</a>
+        <a href="#bundles">Bundles</a>
+        <a href="#subscribe">Free alerts</a>
+        <a href="mailto:brittany@arbiterhr.com">Contact</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/privacy">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Arbiter HR — A Slate Holdings LLC brand. All rights reserved.</div>
+      <div class="footer-copy">For informational purposes only. Not legal advice.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
