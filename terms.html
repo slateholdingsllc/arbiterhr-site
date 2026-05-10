@@ -9,17 +9,34 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--navy:#1B2E4B;--amber:#F59E0B;--off:#F8F7F5;--muted:#5A7290;--rule:#E2E8F0;--serif:'DM Serif Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif}
-body{font-family:var(--sans);color:var(--navy);background:var(--white);-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);color:var(--navy);background:#fff;-webkit-font-smoothing:antialiased}
 a{color:var(--navy)}
 .container{max-width:760px;margin:0 auto;padding:0 24px}
 
-nav{background:var(--navy);border-bottom:3px solid var(--amber);padding:0 24px}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:760px;margin:0 auto}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.w1{font-weight:700;font-size:17px;color:#fff;letter-spacing:.02em;line-height:1;display:block}
-.w2{font-weight:700;font-size:17px;color:var(--amber);letter-spacing:.02em;line-height:1.1;display:block}
-.nav-back{font-size:13px;font-weight:500;color:rgba(255,255,255,.65);text-decoration:none;transition:color .15s}
-.nav-back:hover{color:#fff}
+/* ─── nav (shared with homepage) ─── */
+nav{background:var(--navy);padding:22px 0;border-bottom:1px solid #FFFFFF14;position:relative;z-index:60}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;max-width:1200px;margin:0 auto;padding:0 24px}
+.nav-logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+.nav-mark{width:30px;height:30px;display:flex;align-items:center;justify-content:center;align-self:center}
+.nav-mark svg{width:100%;height:100%;display:block}
+.nav-wm{display:flex;flex-direction:column}
+.nav-wm .w1{font-family:var(--sans);font-weight:700;font-size:17px;color:#fff;letter-spacing:.02em;line-height:1;display:block}
+.nav-wm .w2{font-family:var(--sans);font-weight:700;font-size:17px;color:var(--amber);letter-spacing:.02em;line-height:1.2;display:block}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-family:var(--sans);font-size:13.5px;font-weight:500;color:rgba(255,255,255,.78);transition:color .15s;letter-spacing:.01em;text-decoration:none}
+.nav-links a:hover{color:var(--amber)}
+.nav-cta{background:var(--amber);color:var(--navy) !important;padding:9px 18px;border-radius:6px;font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.02em;transition:background .15s,transform .15s;border:1px solid var(--amber)}
+.nav-cta:hover{background:#D97706;color:var(--navy) !important;transform:translateY(-1px)}
+.nav-toggle{display:none;background:transparent;border:1px solid #FFFFFF26;color:#fff;width:38px;height:38px;border-radius:6px;align-items:center;justify-content:center;cursor:pointer}
+.nav-toggle svg{width:18px;height:18px}
+@media (max-width:900px){
+  .nav-links{position:absolute;top:72px;left:0;right:0;background:#111E30;border-bottom:1px solid #FFFFFF14;flex-direction:column;align-items:stretch;gap:0;padding:8px 0;display:none;z-index:50}
+  .nav-links.on{display:flex}
+  .nav-links a{padding:14px 24px;border-bottom:1px solid #FFFFFF0F;font-size:14.5px}
+  .nav-links a:last-child{border-bottom:none}
+  .nav-links .nav-cta{margin:12px 24px;text-align:center}
+  .nav-toggle{display:flex}
+}
 
 .page-hero{background:var(--navy);padding:52px 0 44px}
 .page-hero h1{font-family:var(--serif);font-size:38px;color:#fff;margin-bottom:8px}
@@ -45,21 +62,36 @@ footer a:hover{color:#fff}
 <nav>
   <div class="nav-inner">
     <a href="/" class="nav-logo">
-      <svg width="28" height="36" viewBox="0 0 28 36" fill="none">
-        <circle cx="14" cy="12" r="11" fill="#F59E0B"/>
-        <circle cx="14" cy="12" r="4" fill="#1B2E4B"/>
-        <path d="M8 21 L14 36 L20 21" fill="#F59E0B"/>
-      </svg>
-      <div><span class="w1">ARBITER</span><span class="w2">HR</span></div>
+      <span class="nav-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18.5" fill="none" stroke="#F59E0B" stroke-width="1"></circle>
+          <circle cx="20" cy="20" r="14" fill="none" stroke="#F59E0B" stroke-width="0.6" opacity="0.35"></circle>
+          <path d="M20 3 L23 20 L20 18 L17 20 Z" fill="#F59E0B"></path>
+          <path d="M20 37 L17 20 L20 22 L23 20 Z" fill="#FFFFFF" opacity="0.55"></path>
+          <path d="M37 20 L20 17 L22 20 L20 23 Z" fill="#FFFFFF" opacity="0.35"></path>
+          <path d="M3 20 L20 23 L18 20 L20 17 Z" fill="#FFFFFF" opacity="0.35"></path>
+          <circle cx="20" cy="20" r="1.6" fill="#F59E0B"></circle>
+        </svg>
+      </span>
+      <div class="nav-wm"><span class="w1">ARBITER</span><span class="w2">HR</span></div>
     </a>
-    <a href="/" class="nav-back">← Back to arbiterhr.com</a>
+    <div class="nav-links" id="nav-links">
+      <a href="/shop">Shop</a>
+      <a href="/#bundles">Bundles</a>
+      <a href="/#workbooks">Workbooks</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#calendar" class="nav-cta">Free Calendar →</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+    </button>
   </div>
 </nav>
 
 <div class="page-hero">
   <div class="container">
     <h1>Terms of Service</h1>
-    <p>Effective date: April 26, 2026 &nbsp;·&nbsp; Arbiter HR, a brand of Slate Holdings LLC</p>
+    <p>Effective date: April 26, 2026 &nbsp;·&nbsp; Arbiter HR</p>
   </div>
 </div>
 
@@ -71,7 +103,7 @@ footer a:hover{color:#fff}
     </div>
 
     <h2>1. Who We Are</h2>
-    <p>Arbiter HR is a brand operated by Slate Holdings LLC, a Wyoming limited liability company ("we," "us," or "our"). Our products are sold through Gumroad and accessible at arbiterhr.com. Questions can be directed to <a href="mailto:brittany@arbiterhr.com">brittany@arbiterhr.com</a>.</p>
+    <p>Arbiterhr.com is operated by the entity behind the Arbiter HR brand ("we," "us," or "our"). We sell downloadable HR compliance reference workbooks through Gumroad. Questions can be directed to <a href="mailto:brittany@arbiterhr.com">brittany@arbiterhr.com</a>.</p>
 
     <h2>2. What You're Purchasing</h2>
     <p>Arbiter HR sells downloadable digital reference workbooks ("References") in Excel and Google Sheets format. Each Reference contains state-by-state compliance information compiled from publicly available statutory sources, organized for professional use.</p>
@@ -87,14 +119,14 @@ footer a:hover{color:#fff}
     <p>Refund requests submitted after 7 days of purchase will not be honored. This guarantee applies to individual purchases and bundles.</p>
 
     <h2>5. Intellectual Property</h2>
-    <p>All References, their content, organization, and presentation are the intellectual property of Slate Holdings LLC. The underlying statutory text sourced from public government databases is in the public domain; however, our compilation, curation, formatting, and editorial work is proprietary.</p>
+    <p>All References, their content, organization, and presentation are the intellectual property of the operator of arbiterhr.com. The underlying statutory text sourced from public government databases is in the public domain; however, our compilation, curation, formatting, and editorial work is proprietary.</p>
     <p>You may not reproduce, distribute, create derivative works from, or publicly display our References without written permission.</p>
 
     <h2>6. Updates</h2>
     <p>Purchasers receive free monthly updates to their References via the Gumroad platform for as long as we continue publishing that Reference. We reserve the right to discontinue any Reference with reasonable notice. Updates are provided as a courtesy and do not extend the original license or create ongoing obligations beyond delivery of the update itself.</p>
 
     <h2>7. Limitation of Liability</h2>
-    <p>To the maximum extent permitted by applicable law, Slate Holdings LLC shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of, or inability to use, our References — including but not limited to compliance penalties, regulatory fines, legal costs, or employment claims.</p>
+    <p>To the maximum extent permitted by applicable law, the operator of arbiterhr.com and its owners, officers, and affiliates (collectively, "Arbiter HR") shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of, or inability to use, our References — including but not limited to compliance penalties, regulatory fines, legal costs, or employment claims.</p>
     <p>Our total liability to you for any claim arising out of or relating to these Terms or our products shall not exceed the amount you paid for the relevant Reference.</p>
 
     <h2>8. Governing Law</h2>
@@ -115,8 +147,17 @@ footer a:hover{color:#fff}
     <a href="/terms">Terms of Service</a>
     <a href="/privacy">Privacy Policy</a>
   </p>
-  <p style="margin-top:12px">© 2026 Arbiter HR — A Slate Holdings LLC brand. Not legal advice.</p>
+  <p style="margin-top:12px">© 2026 Arbiter HR. Not legal advice.</p>
 </footer>
+
+<script>
+document.getElementById('nav-toggle').addEventListener('click',()=>{
+  document.getElementById('nav-links').classList.toggle('on');
+});
+document.querySelectorAll('#nav-links a').forEach(a=>{
+  a.addEventListener('click',()=>document.getElementById('nav-links').classList.remove('on'));
+});
+</script>
 
 </body>
 </html>

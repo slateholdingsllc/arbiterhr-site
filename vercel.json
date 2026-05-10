@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/calendar",
+      "destination": "/#calendar",
+      "permanent": false
+    }
+  ]
+}

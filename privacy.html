@@ -12,13 +12,32 @@
 body{font-family:var(--sans);color:var(--navy);background:#fff;-webkit-font-smoothing:antialiased}
 a{color:var(--navy)}
 .container{max-width:760px;margin:0 auto;padding:0 24px}
-nav{background:var(--navy);border-bottom:3px solid var(--amber);padding:0 24px}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:760px;margin:0 auto}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.w1{font-weight:700;font-size:17px;color:#fff;letter-spacing:.02em;line-height:1;display:block}
-.w2{font-weight:700;font-size:17px;color:var(--amber);letter-spacing:.02em;line-height:1.1;display:block}
-.nav-back{font-size:13px;font-weight:500;color:rgba(255,255,255,.65);text-decoration:none;transition:color .15s}
-.nav-back:hover{color:#fff}
+
+/* ─── nav (shared with homepage) ─── */
+nav{background:var(--navy);padding:22px 0;border-bottom:1px solid #FFFFFF14;position:relative;z-index:60}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;max-width:1200px;margin:0 auto;padding:0 24px}
+.nav-logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+.nav-mark{width:30px;height:30px;display:flex;align-items:center;justify-content:center;align-self:center}
+.nav-mark svg{width:100%;height:100%;display:block}
+.nav-wm{display:flex;flex-direction:column}
+.nav-wm .w1{font-family:var(--sans);font-weight:700;font-size:17px;color:#fff;letter-spacing:.02em;line-height:1;display:block}
+.nav-wm .w2{font-family:var(--sans);font-weight:700;font-size:17px;color:var(--amber);letter-spacing:.02em;line-height:1.2;display:block}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-family:var(--sans);font-size:13.5px;font-weight:500;color:rgba(255,255,255,.78);transition:color .15s;letter-spacing:.01em;text-decoration:none}
+.nav-links a:hover{color:var(--amber)}
+.nav-cta{background:var(--amber);color:var(--navy) !important;padding:9px 18px;border-radius:6px;font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.02em;transition:background .15s,transform .15s;border:1px solid var(--amber)}
+.nav-cta:hover{background:#D97706;color:var(--navy) !important;transform:translateY(-1px)}
+.nav-toggle{display:none;background:transparent;border:1px solid #FFFFFF26;color:#fff;width:38px;height:38px;border-radius:6px;align-items:center;justify-content:center;cursor:pointer}
+.nav-toggle svg{width:18px;height:18px}
+@media (max-width:900px){
+  .nav-links{position:absolute;top:72px;left:0;right:0;background:#111E30;border-bottom:1px solid #FFFFFF14;flex-direction:column;align-items:stretch;gap:0;padding:8px 0;display:none;z-index:50}
+  .nav-links.on{display:flex}
+  .nav-links a{padding:14px 24px;border-bottom:1px solid #FFFFFF0F;font-size:14.5px}
+  .nav-links a:last-child{border-bottom:none}
+  .nav-links .nav-cta{margin:12px 24px;text-align:center}
+  .nav-toggle{display:flex}
+}
+
 .page-hero{background:var(--navy);padding:52px 0 44px}
 .page-hero h1{font-family:var(--serif);font-size:38px;color:#fff;margin-bottom:8px}
 .page-hero p{font-size:14px;color:rgba(255,255,255,.45)}
@@ -41,21 +60,36 @@ footer a:hover{color:#fff}
 <nav>
   <div class="nav-inner">
     <a href="/" class="nav-logo">
-      <svg width="28" height="36" viewBox="0 0 28 36" fill="none">
-        <circle cx="14" cy="12" r="11" fill="#F59E0B"/>
-        <circle cx="14" cy="12" r="4" fill="#1B2E4B"/>
-        <path d="M8 21 L14 36 L20 21" fill="#F59E0B"/>
-      </svg>
-      <div><span class="w1">ARBITER</span><span class="w2">HR</span></div>
+      <span class="nav-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18.5" fill="none" stroke="#F59E0B" stroke-width="1"></circle>
+          <circle cx="20" cy="20" r="14" fill="none" stroke="#F59E0B" stroke-width="0.6" opacity="0.35"></circle>
+          <path d="M20 3 L23 20 L20 18 L17 20 Z" fill="#F59E0B"></path>
+          <path d="M20 37 L17 20 L20 22 L23 20 Z" fill="#FFFFFF" opacity="0.55"></path>
+          <path d="M37 20 L20 17 L22 20 L20 23 Z" fill="#FFFFFF" opacity="0.35"></path>
+          <path d="M3 20 L20 23 L18 20 L20 17 Z" fill="#FFFFFF" opacity="0.35"></path>
+          <circle cx="20" cy="20" r="1.6" fill="#F59E0B"></circle>
+        </svg>
+      </span>
+      <div class="nav-wm"><span class="w1">ARBITER</span><span class="w2">HR</span></div>
     </a>
-    <a href="/" class="nav-back">← Back to arbiterhr.com</a>
+    <div class="nav-links" id="nav-links">
+      <a href="/shop">Shop</a>
+      <a href="/#bundles">Bundles</a>
+      <a href="/#workbooks">Workbooks</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#calendar" class="nav-cta">Free Calendar →</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+    </button>
   </div>
 </nav>
 
 <div class="page-hero">
   <div class="container">
     <h1>Privacy Policy</h1>
-    <p>Effective date: April 26, 2026 &nbsp;·&nbsp; Arbiter HR, a brand of Slate Holdings LLC</p>
+    <p>Effective date: April 26, 2026 &nbsp;·&nbsp; Arbiter HR</p>
   </div>
 </div>
 
@@ -67,7 +101,7 @@ footer a:hover{color:#fff}
     </div>
 
     <h2>1. Who This Applies To</h2>
-    <p>This Privacy Policy applies to all visitors to arbiterhr.com and all purchasers of Arbiter HR products, operated by Slate Holdings LLC ("we," "us," "our"). Contact us anytime at <a href="mailto:brittany@arbiterhr.com">brittany@arbiterhr.com</a>.</p>
+    <p>This Privacy Policy applies to all visitors to arbiterhr.com and all purchasers of Arbiter HR products ("we," "us," "our"). Contact us anytime at <a href="mailto:brittany@arbiterhr.com">brittany@arbiterhr.com</a>.</p>
 
     <h2>2. Information We Collect</h2>
     <p><strong>When you make a purchase:</strong> Transactions are processed through Gumroad. We receive your name, email address, and purchase details. We do not receive or store your payment card information — Gumroad handles all payment processing.</p>
@@ -126,8 +160,17 @@ footer a:hover{color:#fff}
     <a href="/terms">Terms of Service</a>
     <a href="/privacy">Privacy Policy</a>
   </p>
-  <p style="margin-top:12px">© 2026 Arbiter HR — A Slate Holdings LLC brand.</p>
+  <p style="margin-top:12px">© 2026 Arbiter HR.</p>
 </footer>
+
+<script>
+document.getElementById('nav-toggle').addEventListener('click',()=>{
+  document.getElementById('nav-links').classList.toggle('on');
+});
+document.querySelectorAll('#nav-links a').forEach(a=>{
+  a.addEventListener('click',()=>document.getElementById('nav-links').classList.remove('on'));
+});
+</script>
 
 </body>
 </html>
