@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--navy:#1B2E4B;--navy-d:#111E30;--amber:#F59E0B;--amber-d:#D97706;--white:#fff;--off:#F8F7F5;--off2:#F2F4F7;--muted:#5A7290;--rule:#E2E8F0;--serif:'DM Serif Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;--max:1200px;--r:6px}
+:root{--navy:#1B2E4B;--navy-d:#111E30;--amber:#F59E0B;--amber-d:#D97706;--white:#fff;--off:#F8F7F5;--off2:#F2F4F7;--muted:#475569;--rule:#E2E8F0;--serif:'DM Serif Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;--max:1200px;--r:6px}
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);color:var(--navy);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.55}
 a{color:var(--navy);text-decoration:underline;text-decoration-color:rgba(245,158,11,.4);text-underline-offset:3px}
@@ -105,18 +105,18 @@ h2.block-title em{font-style:italic;color:var(--amber)}
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .card{padding:22px 24px;background:#fff;border:1px solid var(--rule);border-radius:6px;transition:border-color .15s,transform .15s}
 .card:hover{border-color:var(--amber);transform:translateY(-1px)}
-.card h4{font-family:var(--serif);font-size:18px;margin-bottom:6px;color:var(--navy)}
-.card h4 a{text-decoration:none;color:inherit}
-.card h4 a:hover{color:var(--amber-d)}
+.card h3{font-family:var(--serif);font-size:18px;margin-bottom:6px;color:var(--navy)}
+.card h3 a{text-decoration:none;color:inherit}
+.card h3 a:hover{color:var(--amber-d)}
 .card .meta{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:flex;gap:8px;align-items:center}
 .card .meta .tier-mini{padding:3px 9px;border-radius:100px;font-weight:700;letter-spacing:.05em}
 .card .summary{font-size:14px;color:#374151;line-height:1.55}
 
 /* related links footer */
 section.related{background:var(--off);padding:36px 0;margin-top:48px;border-top:1px solid var(--rule)}
-section.related h3{font-family:var(--serif);font-size:22px;margin-bottom:18px;color:var(--navy)}
+section.related h2{font-family:var(--serif);font-size:22px;margin-bottom:18px;color:var(--navy)}
 section.related .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-section.related .rel-col h5{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:10px}
+section.related .rel-col h3{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:10px}
 section.related .rel-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}
 section.related .rel-col a{font-size:13.5px;color:var(--navy);text-decoration:none}
 section.related .rel-col a:hover{color:var(--amber-d);text-decoration:underline}
@@ -184,39 +184,39 @@ footer.site .foot-links a:hover{color:var(--amber)}
     <h2 class="block-title">Hawaii <em>compliance topics.</em></h2>
     <div class="cards"><div class="card">
       <div class="meta"><span class="tier-mini" style="background:#FEE2E2;color:#B91C1C">Critical</span> <span>Final Pay &amp; Termination</span></div>
-      <h4><a href="/states/hawaii/final-pay-termination">Final Pay &amp; Termination &rarr;</a></h4>
+      <h3><a href="/states/hawaii/final-pay-termination">Final Pay &amp; Termination &rarr;</a></h3>
       <p class="summary">Immediate payment required for involuntary termination. Strict enforcement.</p>
     </div><div class="card">
       <div class="meta"><span class="tier-mini" style="background:#DBEAFE;color:#1E40AF">TDI/PFML Only</span> <span>Paid Leave</span></div>
-      <h4>Paid Leave</h4>
+      <h3>Paid Leave</h3>
       <p class="summary">See workbook for full paid leave rules.</p>
     </div><div class="card">
       <div class="meta"><span class="tier-mini" style="background:#DBEAFE;color:#1E40AF">Posted Salary</span> <span>Pay Transparency</span></div>
-      <h4>Pay Transparency</h4>
+      <h3>Pay Transparency</h3>
       <p class="summary">HB 1 effective 1/1/2024. Pay range required in job listings. Applies to remote roles if any work performed in HI.</p>
     </div><div class="card">
       <div class="meta"><span class="tier-mini" style="background:#FEF3C7;color:#92400E">Both</span> <span>Background Checks</span></div>
-      <h4>Background Checks</h4>
+      <h3>Background Checks</h3>
       <p class="summary">HRS § 378-2.5. BTB: no criminal history inquiry until conditional offer. Credit checks restricted to roles with fiduciary responsibility.</p>
     </div><div class="card">
       <div class="meta"><span class="tier-mini" style="background:#DBEAFE;color:#1E40AF">Limited</span> <span>Non-Compete</span></div>
-      <h4>Non-Compete</h4>
+      <h3>Non-Compete</h3>
       <p class="summary">See workbook for full non-compete rules.</p>
     </div><div class="card">
-      <div class="meta"><span class="tier-mini" style="background:#E2E8F0;color:#475569">Federal Only</span> <span>Meal &amp; Rest Breaks</span></div>
-      <h4>Meal &amp; Rest Breaks</h4>
+      <div class="meta"><span class="tier-mini" style="background:#E2E8F0;color:#334155">Federal Only</span> <span>Meal &amp; Rest Breaks</span></div>
+      <h3>Meal &amp; Rest Breaks</h3>
       <p class="summary">See workbook for full meal &amp; rest breaks rules.</p>
     </div><div class="card">
-      <div class="meta"><span class="tier-mini" style="background:#E2E8F0;color:#475569">No Law</span> <span>Predictive Scheduling</span></div>
-      <h4>Predictive Scheduling</h4>
+      <div class="meta"><span class="tier-mini" style="background:#E2E8F0;color:#334155">No Law</span> <span>Predictive Scheduling</span></div>
+      <h3>Predictive Scheduling</h3>
       <p class="summary">No predictive scheduling law.</p>
     </div><div class="card">
-      <div class="meta"><span class="tier-mini" style="background:#E2E8F0;color:#475569">Standard</span> <span>New Hire Reporting</span></div>
-      <h4>New Hire Reporting</h4>
+      <div class="meta"><span class="tier-mini" style="background:#E2E8F0;color:#334155">Standard</span> <span>New Hire Reporting</span></div>
+      <h3>New Hire Reporting</h3>
       <p class="summary">Federal standard. Online submission preferred.</p>
     </div><div class="card">
       <div class="meta"><span class="tier-mini" style="background:#FEE2E2;color:#B91C1C">Complex</span> <span>Payroll Tax &amp; Garnishment</span></div>
-      <h4>Payroll Tax &amp; Garnishment</h4>
+      <h3>Payroll Tax &amp; Garnishment</h3>
       <p class="summary">Hawaii uses unique tiered garnishment formula that is often more protective than federal CCPA limits.</p>
     </div></div>
   </section>
@@ -239,18 +239,18 @@ footer.site .foot-links a:hover{color:var(--amber)}
 </div></main>
 
 <section class="related"><div class="container">
-  <h3>Keep reading</h3>
+  <h2>Keep reading</h2>
   <div class="rel-grid">
     <div class="rel-col">
-        <h5>More for Hawaii</h5>
+        <h3>More for Hawaii</h3>
         <ul><li><a href="/states/hawaii/final-pay-termination">Final Pay &amp; Termination</a></li></ul>
       </div>
     <div class="rel-col">
-        <h5>All 9 topics</h5>
+        <h3>All 9 topics</h3>
         <ul><li><a href="/topics/final-pay-termination">Final Pay &amp; Termination</a></li><li><a href="/topics/paid-leave">Paid Leave</a></li><li><a href="/topics/pay-transparency">Pay Transparency</a></li><li><a href="/topics/background-checks">Background Checks</a></li><li><a href="/topics/non-compete">Non-Compete</a></li><li><a href="/topics/meal-rest-breaks">Meal &amp; Rest Breaks</a></li><li><a href="/topics/predictive-scheduling">Predictive Scheduling</a></li><li><a href="/topics/new-hire-reporting">New Hire Reporting</a></li><li><a href="/topics/payroll-tax-garnishment">Payroll Tax &amp; Garnishment</a></li></ul>
       </div>
     <div class="rel-col wide">
-        <h5>Browse states</h5>
+        <h3>Browse states</h3>
         <ul><li><a href="/states/alabama">Alabama</a></li><li><a href="/states/alaska">Alaska</a></li><li><a href="/states/arizona">Arizona</a></li><li><a href="/states/arkansas">Arkansas</a></li><li><a href="/states/california">California</a></li><li><a href="/states/colorado">Colorado</a></li><li><a href="/states/connecticut">Connecticut</a></li><li><a href="/states/delaware">Delaware</a></li><li><a href="/states/florida">Florida</a></li><li><a href="/states/georgia">Georgia</a></li><li><a href="/states/hawaii">Hawaii</a></li><li><a href="/states/idaho">Idaho</a></li><li><a href="/states/illinois">Illinois</a></li><li><a href="/states/indiana">Indiana</a></li><li><a href="/states/iowa">Iowa</a></li><li><a href="/states/kansas">Kansas</a></li><li><a href="/states/kentucky">Kentucky</a></li><li><a href="/states/louisiana">Louisiana</a></li><li><a href="/states/maine">Maine</a></li><li><a href="/states/maryland">Maryland</a></li><li><a href="/states/massachusetts">Massachusetts</a></li><li><a href="/states/michigan">Michigan</a></li><li><a href="/states/minnesota">Minnesota</a></li><li><a href="/states/mississippi">Mississippi</a></li><li><a href="/states/missouri">Missouri</a></li><li><a href="/states/montana">Montana</a></li><li><a href="/states/nebraska">Nebraska</a></li><li><a href="/states/nevada">Nevada</a></li><li><a href="/states/new-hampshire">New Hampshire</a></li><li><a href="/states/new-jersey">New Jersey</a></li><li><a href="/states/new-mexico">New Mexico</a></li><li><a href="/states/new-york">New York</a></li><li><a href="/states/north-carolina">North Carolina</a></li><li><a href="/states/north-dakota">North Dakota</a></li><li><a href="/states/ohio">Ohio</a></li><li><a href="/states/oklahoma">Oklahoma</a></li><li><a href="/states/oregon">Oregon</a></li><li><a href="/states/pennsylvania">Pennsylvania</a></li><li><a href="/states/rhode-island">Rhode Island</a></li><li><a href="/states/south-carolina">South Carolina</a></li><li><a href="/states/south-dakota">South Dakota</a></li><li><a href="/states/tennessee">Tennessee</a></li><li><a href="/states/texas">Texas</a></li><li><a href="/states/utah">Utah</a></li><li><a href="/states/vermont">Vermont</a></li><li><a href="/states/virginia">Virginia</a></li><li><a href="/states/washington">Washington</a></li><li><a href="/states/west-virginia">West Virginia</a></li><li><a href="/states/wisconsin">Wisconsin</a></li><li><a href="/states/wyoming">Wyoming</a></li></ul>
       </div>
   </div>
