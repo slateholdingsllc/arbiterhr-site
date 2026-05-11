@@ -22,6 +22,7 @@
 <url><loc>https://arbiterhr.com/states/colorado</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
 <url><loc>https://arbiterhr.com/states/connecticut</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
 <url><loc>https://arbiterhr.com/states/delaware</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
+<url><loc>https://arbiterhr.com/states/district-of-columbia</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
 <url><loc>https://arbiterhr.com/states/florida</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
 <url><loc>https://arbiterhr.com/states/georgia</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
 <url><loc>https://arbiterhr.com/states/hawaii</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
@@ -69,6 +70,7 @@
 <url><loc>https://arbiterhr.com/states/california/final-pay-termination</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
 <url><loc>https://arbiterhr.com/states/colorado/final-pay-termination</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
 <url><loc>https://arbiterhr.com/states/connecticut/final-pay-termination</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
+<url><loc>https://arbiterhr.com/states/district-of-columbia/final-pay-termination</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
 <url><loc>https://arbiterhr.com/states/florida/final-pay-termination</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
 <url><loc>https://arbiterhr.com/states/georgia/final-pay-termination</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
 <url><loc>https://arbiterhr.com/states/hawaii/final-pay-termination</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
@@ -130,4 +132,9 @@
 <url><loc>https://arbiterhr.com/states/massachusetts/meal-rest-breaks</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
 <url><loc>https://arbiterhr.com/states/massachusetts/new-hire-reporting</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
 <url><loc>https://arbiterhr.com/states/massachusetts/payroll-tax-garnishment</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
+<url><loc>https://arbiterhr.com/states/district-of-columbia/paid-leave</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
+<url><loc>https://arbiterhr.com/states/district-of-columbia/pay-transparency</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
+<url><loc>https://arbiterhr.com/states/district-of-columbia/background-checks</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
+<url><loc>https://arbiterhr.com/states/district-of-columbia/non-compete</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
+<url><loc>https://arbiterhr.com/states/district-of-columbia/payroll-tax-garnishment</loc><lastmod>2026-05-11</lastmod><priority>0.7</priority></url>
 </urlset>
