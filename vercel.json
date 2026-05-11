@@ -6,6 +6,291 @@
       "source": "/calendar",
       "destination": "/#calendar",
       "permanent": false
+    },
+    {
+      "source": "/states/california.html",
+      "destination": "/states/california",
+      "permanent": true
+    },
+    {
+      "source": "/states/colorado.html",
+      "destination": "/states/colorado",
+      "permanent": true
+    },
+    {
+      "source": "/states/florida.html",
+      "destination": "/states/florida",
+      "permanent": true
+    },
+    {
+      "source": "/states/georgia.html",
+      "destination": "/states/georgia",
+      "permanent": true
+    },
+    {
+      "source": "/states/illinois.html",
+      "destination": "/states/illinois",
+      "permanent": true
+    },
+    {
+      "source": "/states/massachusetts.html",
+      "destination": "/states/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/states/new-york.html",
+      "destination": "/states/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/states/pennsylvania.html",
+      "destination": "/states/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/states/texas.html",
+      "destination": "/states/texas",
+      "permanent": true
+    },
+    {
+      "source": "/states/washington.html",
+      "destination": "/states/washington",
+      "permanent": true
+    },
+    {
+      "source": "/topics/final-pay-termination.html",
+      "destination": "/topics/final-pay-termination",
+      "permanent": true
+    },
+    {
+      "source": "/topics/paid-leave.html",
+      "destination": "/topics/paid-leave",
+      "permanent": true
+    },
+    {
+      "source": "/topics/pay-transparency.html",
+      "destination": "/topics/pay-transparency",
+      "permanent": true
+    },
+    {
+      "source": "/topics/background-checks.html",
+      "destination": "/topics/background-checks",
+      "permanent": true
+    },
+    {
+      "source": "/topics/non-compete.html",
+      "destination": "/topics/non-compete",
+      "permanent": true
+    },
+    {
+      "source": "/topics/meal-rest-breaks.html",
+      "destination": "/topics/meal-rest-breaks",
+      "permanent": true
+    },
+    {
+      "source": "/topics/predictive-scheduling.html",
+      "destination": "/topics/predictive-scheduling",
+      "permanent": true
+    },
+    {
+      "source": "/topics/new-hire-reporting.html",
+      "destination": "/topics/new-hire-reporting",
+      "permanent": true
+    },
+    {
+      "source": "/topics/payroll-tax-garnishment.html",
+      "destination": "/topics/payroll-tax-garnishment",
+      "permanent": true
+    },
+    {
+      "source": "/states/california.html",
+      "destination": "/states/california",
+      "permanent": true
+    },
+    {
+      "source": "/states/colorado.html",
+      "destination": "/states/colorado",
+      "permanent": true
+    },
+    {
+      "source": "/states/florida.html",
+      "destination": "/states/florida",
+      "permanent": true
+    },
+    {
+      "source": "/states/georgia.html",
+      "destination": "/states/georgia",
+      "permanent": true
+    },
+    {
+      "source": "/states/illinois.html",
+      "destination": "/states/illinois",
+      "permanent": true
+    },
+    {
+      "source": "/states/massachusetts.html",
+      "destination": "/states/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/states/new-york.html",
+      "destination": "/states/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/states/pennsylvania.html",
+      "destination": "/states/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/states/texas.html",
+      "destination": "/states/texas",
+      "permanent": true
+    },
+    {
+      "source": "/states/washington.html",
+      "destination": "/states/washington",
+      "permanent": true
+    },
+    {
+      "source": "/topics/final-pay-termination.html",
+      "destination": "/topics/final-pay-termination",
+      "permanent": true
+    },
+    {
+      "source": "/topics/paid-leave.html",
+      "destination": "/topics/paid-leave",
+      "permanent": true
+    },
+    {
+      "source": "/topics/pay-transparency.html",
+      "destination": "/topics/pay-transparency",
+      "permanent": true
+    },
+    {
+      "source": "/topics/background-checks.html",
+      "destination": "/topics/background-checks",
+      "permanent": true
+    },
+    {
+      "source": "/topics/non-compete.html",
+      "destination": "/topics/non-compete",
+      "permanent": true
+    },
+    {
+      "source": "/topics/meal-rest-breaks.html",
+      "destination": "/topics/meal-rest-breaks",
+      "permanent": true
+    },
+    {
+      "source": "/topics/predictive-scheduling.html",
+      "destination": "/topics/predictive-scheduling",
+      "permanent": true
+    },
+    {
+      "source": "/topics/new-hire-reporting.html",
+      "destination": "/topics/new-hire-reporting",
+      "permanent": true
+    },
+    {
+      "source": "/topics/payroll-tax-garnishment.html",
+      "destination": "/topics/payroll-tax-garnishment",
+      "permanent": true
+    },
+    {
+      "source": "/states/california.html",
+      "destination": "/states/california",
+      "permanent": true
+    },
+    {
+      "source": "/states/colorado.html",
+      "destination": "/states/colorado",
+      "permanent": true
+    },
+    {
+      "source": "/states/florida.html",
+      "destination": "/states/florida",
+      "permanent": true
+    },
+    {
+      "source": "/states/georgia.html",
+      "destination": "/states/georgia",
+      "permanent": true
+    },
+    {
+      "source": "/states/illinois.html",
+      "destination": "/states/illinois",
+      "permanent": true
+    },
+    {
+      "source": "/states/massachusetts.html",
+      "destination": "/states/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/states/new-york.html",
+      "destination": "/states/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/states/pennsylvania.html",
+      "destination": "/states/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/states/texas.html",
+      "destination": "/states/texas",
+      "permanent": true
+    },
+    {
+      "source": "/states/washington.html",
+      "destination": "/states/washington",
+      "permanent": true
+    },
+    {
+      "source": "/topics/final-pay-termination.html",
+      "destination": "/topics/final-pay-termination",
+      "permanent": true
+    },
+    {
+      "source": "/topics/paid-leave.html",
+      "destination": "/topics/paid-leave",
+      "permanent": true
+    },
+    {
+      "source": "/topics/pay-transparency.html",
+      "destination": "/topics/pay-transparency",
+      "permanent": true
+    },
+    {
+      "source": "/topics/background-checks.html",
+      "destination": "/topics/background-checks",
+      "permanent": true
+    },
+    {
+      "source": "/topics/non-compete.html",
+      "destination": "/topics/non-compete",
+      "permanent": true
+    },
+    {
+      "source": "/topics/meal-rest-breaks.html",
+      "destination": "/topics/meal-rest-breaks",
+      "permanent": true
+    },
+    {
+      "source": "/topics/predictive-scheduling.html",
+      "destination": "/topics/predictive-scheduling",
+      "permanent": true
+    },
+    {
+      "source": "/topics/new-hire-reporting.html",
+      "destination": "/topics/new-hire-reporting",
+      "permanent": true
+    },
+    {
+      "source": "/topics/payroll-tax-garnishment.html",
+      "destination": "/topics/payroll-tax-garnishment",
+      "permanent": true
     }
   ]
 }
