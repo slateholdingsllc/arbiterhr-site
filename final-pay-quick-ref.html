@@ -194,9 +194,11 @@ footer{background:#0B1626;border-top:1px solid #FFFFFF0F;padding:60px 0 28px;col
         <h3>Get the <em>free PDF.</em></h3>
         <p class="capture-sub">Enter your email and we'll send the reference straight to your inbox.</p>
         <!--
-          Kit form: "Final Pay Quick Reference" (uid b801d08fa2)
-          Modern Kit embed uses tenant-domain (arbiter-hr.kit.com) keyed on uid only —
-          no separate numeric form_id. Incentive email delivers
+          Kit form: "Final Pay Quick Reference" (form_id 9436337, uid b801d08fa2).
+          Numeric form_id was NOT surfaced in Kit's dashboard for this form — extracted
+          from arbiter-hr.kit.com/b801d08fa2/index.js which embeds the canonical form
+          HTML server-side. Mirrors the working calendar form pattern on index.html.
+          Incentive email delivers
           https://arbiterhr.com/assets/final-pay-quick-ref-may-2026.pdf.
           Free plan: form-based segmentation (no lead-final-pay-ref tag — Kit free
           tier doesn't support tag automation).
@@ -204,9 +206,9 @@ footer{background:#0B1626;border-top:1px solid #FFFFFF0F;padding:60px 0 28px;col
         <form
           class="capture-form"
           id="lead-form"
-          action="https://app.kit.com/forms/b801d08fa2/subscriptions"
+          action="https://app.kit.com/forms/9436337/subscriptions"
           method="post"
-          data-sv-form="b801d08fa2"
+          data-sv-form="9436337"
           data-uid="b801d08fa2"
           data-format="inline"
           data-version="5"
