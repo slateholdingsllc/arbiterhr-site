@@ -194,22 +194,20 @@ footer{background:#0B1626;border-top:1px solid #FFFFFF0F;padding:60px 0 28px;col
         <h3>Get the <em>free PDF.</em></h3>
         <p class="capture-sub">Enter your email and we'll send the reference straight to your inbox.</p>
         <!--
-          KIT_FORM_PLACEHOLDER
-          Current action + data-uid point to the existing "2026 Calendar" form (id 9372890, uid b4785ba77a)
-          as a placeholder so the page renders + submits. Swap to the new "Final Pay Quick Reference"
-          Kit form once created. Kit dashboard config required:
-            1. Create new Form named "Final Pay Quick Reference"
-            2. Set Incentive Email body → link https://arbiterhr.com/assets/final-pay-quick-ref-may-2026.pdf
-            3. Apply tag "lead-final-pay-ref" to form subscribers (Form settings → Incentive → Apply tag)
-            4. Send new form_id + data-uid to swap in this action attribute below
+          Kit form: "Final Pay Quick Reference" (uid b801d08fa2)
+          Modern Kit embed uses tenant-domain (arbiter-hr.kit.com) keyed on uid only —
+          no separate numeric form_id. Incentive email delivers
+          https://arbiterhr.com/assets/final-pay-quick-ref-may-2026.pdf.
+          Free plan: form-based segmentation (no lead-final-pay-ref tag — Kit free
+          tier doesn't support tag automation).
         -->
         <form
           class="capture-form"
           id="lead-form"
-          action="https://app.kit.com/forms/9372890/subscriptions"
+          action="https://arbiter-hr.kit.com/b801d08fa2/subscriptions"
           method="post"
-          data-sv-form="9372890"
-          data-uid="b4785ba77a"
+          data-sv-form="b801d08fa2"
+          data-uid="b801d08fa2"
           data-format="inline"
           data-version="5"
           novalidate>
@@ -274,6 +272,7 @@ footer{background:#0B1626;border-top:1px solid #FFFFFF0F;padding:60px 0 28px;col
 </footer>
 
 <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+<script async data-uid="b801d08fa2" src="https://arbiter-hr.kit.com/b801d08fa2/index.js"></script>
 <script>
 document.getElementById('nav-toggle').addEventListener('click',()=>{
   document.getElementById('nav-links').classList.toggle('on');
