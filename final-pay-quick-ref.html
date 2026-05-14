@@ -273,8 +273,14 @@ footer{background:#0B1626;border-top:1px solid #FFFFFF0F;padding:60px 0 28px;col
   </div>
 </footer>
 
-<script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
-<script async data-uid="b801d08fa2" src="https://arbiter-hr.kit.com/b801d08fa2/index.js"></script>
+<!--
+  Kit JS widget intentionally NOT loaded. The custom branded form above
+  POSTs directly to https://app.kit.com/forms/9436337/subscriptions.
+  Loading ck.5.js + the per-form index.js caused Kit to auto-render a
+  second hosted form below the custom one. The form action endpoint
+  works without the JS, and Kit's incentive-email delivery is triggered
+  on the server side from the POST.
+-->
 <script>
 document.getElementById('nav-toggle').addEventListener('click',()=>{
   document.getElementById('nav-links').classList.toggle('on');
