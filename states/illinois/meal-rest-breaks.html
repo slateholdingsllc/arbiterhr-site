@@ -143,6 +143,7 @@ footer.site .foot-links a:hover{color:var(--amber)}
   section.related .rel-grid{grid-template-columns:1fr}
 }</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://arbiterhr.com/"},{"@type":"ListItem","position":2,"name":"Illinois","item":"https://arbiterhr.com/states/illinois"},{"@type":"ListItem","position":3,"name":"Meal & Rest Breaks","item":"https://arbiterhr.com/states/illinois/meal-rest-breaks"}]}</script>
+<link rel="stylesheet" href="/assets/waitlist.css">
 </head>
 <body>
 <nav class="site">
@@ -208,7 +209,7 @@ footer.site .foot-links a:hover{color:var(--amber)}
     <div class="lure-side">
       <div class="price">$39</div>
       <p class="desc">Meal &amp; Rest Break Requirements — instant download, Excel + Google Sheets, free monthly updates for life.</p>
-      <a class="lure-cta" href="https://arbiterhr.gumroad.com/l/meal-rest-break-requirements-by-state">Get the Meal &amp; Rest Breaks →</a>
+      <a class="lure-cta" href="#" onclick="openWaitlist('P6 Meal &amp; Rest Breaks'); return false;">Join the waitlist →</a>
     </div>
   </div>
 </section>
@@ -256,4 +257,5 @@ document.querySelectorAll('#nav-links a').forEach(a=>{
   a.addEventListener('click',()=>document.getElementById('nav-links').classList.remove('on'));
 });
 </script>
+<script src="/assets/waitlist.js" defer></script>
 </body></html>

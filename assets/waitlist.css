@@ -1,0 +1,206 @@
+/* ===========================================================================
+   Arbiter HR — sitewide waitlist banner + modal (loaded on every page)
+   ---------------------------------------------------------------------------
+   Inline hex throughout. No CSS variables. No green. Brand palette only.
+   Spec File 1 (banner + modal) + dismiss-button + .launch-note additions.
+   =========================================================================== */
+
+.arbiter-banner {
+  position: relative;
+  background: #1B2E4B;
+  color: #F5F0E8;
+  padding: 12px 48px 12px 24px;
+  text-align: center;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.arbiter-banner a {
+  color: #F59E0B;
+  text-decoration: underline;
+  margin-left: 8px;
+}
+
+.arbiter-banner-close {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #F5F0E8;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+  padding: 2px 8px;
+  opacity: 0.7;
+  font-family: inherit;
+}
+
+.arbiter-banner-close:hover { opacity: 1; }
+
+.arbiter-banner.hidden { display: none; }
+
+.waitlist-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(27, 46, 75, 0.7);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.waitlist-modal-overlay.open {
+  display: flex;
+}
+
+.waitlist-modal {
+  background: #FAFAF9;
+  border-radius: 8px;
+  padding: 32px;
+  max-width: 460px;
+  width: 90%;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.waitlist-modal h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #1B2E4B;
+  margin: 0 0 8px;
+}
+
+.waitlist-modal p.subtitle {
+  color: #65645F;
+  font-size: 14px;
+  margin: 0 0 24px;
+  line-height: 1.55;
+}
+
+.waitlist-modal label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1B2E4B;
+  margin: 12px 0 4px;
+}
+
+.waitlist-modal input,
+.waitlist-modal select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #E5E5E5;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  background: white;
+  box-sizing: border-box;
+  color: #1B2E4B;
+}
+
+.waitlist-modal input:focus,
+.waitlist-modal select:focus {
+  outline: none;
+  border-color: #1B2E4B;
+}
+
+.waitlist-modal button[type="submit"] {
+  background: #1B2E4B;
+  color: #F5F0E8;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  font-family: inherit;
+}
+
+.waitlist-modal button[type="submit"]:hover {
+  background: #243D5E;
+}
+
+.waitlist-modal button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.waitlist-modal .close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #65645F;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+  font-family: inherit;
+}
+
+.waitlist-modal .close-btn:hover { color: #1B2E4B; }
+
+.product-context-line {
+  background: #F5F0E8;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #65645F;
+  margin-bottom: 16px;
+  display: none;
+}
+
+.product-context-line.visible { display: block; }
+
+.product-context-line strong { color: #1B2E4B; }
+
+.waitlist-success {
+  text-align: center;
+  padding: 8px 0 4px;
+}
+.waitlist-success-mark {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(245, 158, 11, 0.18);
+  border: 1.5px solid #F59E0B;
+  color: #F59E0B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin: 0 auto 18px;
+}
+.waitlist-success h2 { margin-bottom: 10px; }
+.waitlist-success p {
+  color: #65645F;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 32em;
+  margin: 0 auto;
+}
+
+/* "Launching June 2026" hint under prices.
+   Default: dark text on light backgrounds (shop page).
+   .on-dark modifier: light text on dark backgrounds (homepage hero/bundles). */
+.launch-note {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #5A7290;
+  letter-spacing: 0.02em;
+  margin-top: 6px;
+  line-height: 1.4;
+  display: block;
+}
+.launch-note.on-dark {
+  color: rgba(255, 255, 255, 0.55);
+}

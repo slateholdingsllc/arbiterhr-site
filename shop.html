@@ -41,7 +41,9 @@ a{color:inherit;text-decoration:none}
 /* Nav */
 nav{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:3px solid var(--amber)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:24px}
-.nav-logo{display:flex;align-items:center;gap:12px}
+.nav-logo{display:flex;align-items:center;gap:11px}
+.nav-mark{width:30px;height:30px;display:flex;align-items:center;justify-content:center;align-self:center}
+.nav-mark svg{width:100%;height:100%;display:block}
 .nav-wordmark .w1{font-family:var(--sans);font-weight:700;font-size:18px;color:var(--white);letter-spacing:.02em;display:block;line-height:1}
 .nav-wordmark .w2{font-family:var(--sans);font-weight:700;font-size:18px;color:var(--amber);letter-spacing:.02em;display:block;line-height:1.1}
 .nav-links{display:flex;align-items:center;gap:32px}
@@ -165,6 +167,7 @@ footer{background:var(--navy-d);padding:48px 0 32px;border-top:3px solid var(--a
   .included-features{grid-template-columns:1fr}
 }
 </style>
+<link rel="stylesheet" href="/assets/waitlist.css">
 </head>
 <body>
 <template id="__bundler_thumbnail">
@@ -181,11 +184,17 @@ footer{background:var(--navy-d);padding:48px 0 32px;border-top:3px solid var(--a
 <nav data-screen-label="Shop">
   <div class="container nav-inner">
     <a href="/" class="nav-logo">
-      <svg width="34" height="42" viewBox="0 0 34 42" fill="none">
-        <circle cx="17" cy="15" r="13" fill="#F59E0B"></circle>
-        <circle cx="17" cy="15" r="5" fill="#1B2E4B"></circle>
-        <path d="M11 26 L17 42 L23 26" fill="#F59E0B"></path>
-      </svg>
+      <span class="nav-mark" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18.5" fill="none" stroke="#F59E0B" stroke-width="1"></circle>
+          <circle cx="20" cy="20" r="14" fill="none" stroke="#F59E0B" stroke-width="0.6" opacity="0.35"></circle>
+          <path d="M20 3 L23 20 L20 18 L17 20 Z" fill="#F59E0B"></path>
+          <path d="M20 37 L17 20 L20 22 L23 20 Z" fill="#FFFFFF" opacity="0.55"></path>
+          <path d="M37 20 L20 17 L22 20 L20 23 Z" fill="#FFFFFF" opacity="0.35"></path>
+          <path d="M3 20 L20 23 L18 20 L20 17 Z" fill="#FFFFFF" opacity="0.35"></path>
+          <circle cx="20" cy="20" r="1.6" fill="#F59E0B"></circle>
+        </svg>
+      </span>
       <div class="nav-wordmark">
         <span class="w1">ARBITER</span>
         <span class="w2">HR</span>
@@ -253,11 +262,12 @@ footer{background:var(--navy-d);padding:48px 0 32px;border-top:3px solid var(--a
             <div class="bundle-price-stack">
               <span class="bundle-was">$156 individually</span>
               <span class="bundle-now">$129</span>
+              <span class="launch-note">Launching June 2026</span>
             </div>
             <span class="bundle-save">Save $27</span>
           </div>
           <div class="bundle-cta">
-            <a href="#buy-payroll-bundle" class="btn btn-outline">Get the Bundle →</a>
+            <a href="#" class="btn btn-outline" onclick="openWaitlist('Payroll Admin Bundle'); return false;">Join the waitlist →</a>
             <span class="bundle-meta">4 workbooks · Instant download · Free updates</span>
           </div>
         </div>
@@ -281,11 +291,12 @@ footer{background:var(--navy-d);padding:48px 0 32px;border-top:3px solid var(--a
             <div class="bundle-price-stack">
               <span class="bundle-was">$156 individually</span>
               <span class="bundle-now">$129</span>
+              <span class="launch-note">Launching June 2026</span>
             </div>
             <span class="bundle-save">Save $27</span>
           </div>
           <div class="bundle-cta">
-            <a href="#buy-hr-bundle" class="btn btn-outline">Get the Bundle →</a>
+            <a href="#" class="btn btn-outline" onclick="openWaitlist('HR Generalist Bundle'); return false;">Join the waitlist →</a>
             <span class="bundle-meta">4 workbooks · Instant download · Free updates</span>
           </div>
         </div>
@@ -310,11 +321,12 @@ footer{background:var(--navy-d);padding:48px 0 32px;border-top:3px solid var(--a
             <div class="bundle-price-stack">
               <span class="bundle-was">$351 individually</span>
               <span class="bundle-now">$249</span>
+              <span class="launch-note">Launching June 2026</span>
             </div>
             <span class="bundle-save">Save $102</span>
           </div>
           <div class="bundle-cta">
-            <a href="#buy-complete-catalog" class="btn btn-primary">Get the Catalog →</a>
+            <a href="#" class="btn btn-primary" onclick="openWaitlist('Complete Catalog'); return false;">Join the waitlist →</a>
             <span class="bundle-meta">9 workbooks · Single download · Free updates</span>
           </div>
         </div>
@@ -353,8 +365,9 @@ footer{background:var(--navy-d);padding:48px 0 32px;border-top:3px solid var(--a
           <p>State deadlines for the last paycheck, PTO payout rules, separation type triggers, and penalty exposure when timing slips. Built for the moment a separation lands.</p>
           <div class="wb-foot">
             <span class="wb-price">$39</span>
-            <a href="#buy-final-pay-termination" class="wb-cta">Get this Workbook →</a>
+            <a href="#" class="wb-cta" onclick="openWaitlist('P1 Final Pay &amp; Termination'); return false;">Join the waitlist →</a>
           </div>
+          <div class="launch-note">Launching June 2026</div>
         </div>
       </article>
 
@@ -366,8 +379,9 @@ footer{background:var(--navy-d);padding:48px 0 32px;border-top:3px solid var(--a
           <p>Paid sick leave requirements, state family and medical leave mandates, FMLA interaction, and accrual rules — every state's leave law in one reference.</p>
           <div class="wb-foot">
             <span class="wb-price">$39</span>
-            <a href="#buy-paid-leave" class="wb-cta">Get this Workbook →</a>
+            <a href="#" class="wb-cta" onclick="openWaitlist('P2 Paid Leave'); return false;">Join the waitlist →</a>
           </div>
+          <div class="launch-note">Launching June 2026</div>
         </div>
       </article>
 
@@ -379,8 +393,9 @@ footer{background:var(--navy-d);padding:48px 0 32px;border-top:3px solid var(--a
           <p>Posting requirements and triggers by state, what counts as a pay range, and civil penalty exposure up to $10,000 per violation in enforcement states.</p>
           <div class="wb-foot">
             <span class="wb-price">$39</span>
-            <a href="#buy-pay-transparency" class="wb-cta">Get this Workbook →</a>
+            <a href="#" class="wb-cta" onclick="openWaitlist('P3 Pay Transparency'); return false;">Join the waitlist →</a>
           </div>
+          <div class="launch-note">Launching June 2026</div>
         </div>
       </article>
 
@@ -392,8 +407,9 @@ footer{background:var(--navy-d);padding:48px 0 32px;border-top:3px solid var(--a
           <p>FCRA adverse action timing and notices, ban-the-box laws by state and employer size, and credit check restrictions across all 50 states.</p>
           <div class="wb-foot">
             <span class="wb-price">$39</span>
-            <a href="#buy-background-checks" class="wb-cta">Get this Workbook →</a>
+            <a href="#" class="wb-cta" onclick="openWaitlist('P4 Background &amp; Credit'); return false;">Join the waitlist →</a>
           </div>
+          <div class="launch-note">Launching June 2026</div>
         </div>
       </article>
 
@@ -405,8 +421,9 @@ footer{background:var(--navy-d);padding:48px 0 32px;border-top:3px solid var(--a
           <p>Enforceability status for all 50 states, salary thresholds where non-competes are void, garden leave requirements, and consideration rules.</p>
           <div class="wb-foot">
             <span class="wb-price">$39</span>
-            <a href="#buy-non-compete" class="wb-cta">Get this Workbook →</a>
+            <a href="#" class="wb-cta" onclick="openWaitlist('P5 Non-Compete'); return false;">Join the waitlist →</a>
           </div>
+          <div class="launch-note">Launching June 2026</div>
         </div>
       </article>
 
@@ -418,8 +435,9 @@ footer{background:var(--navy-d);padding:48px 0 32px;border-top:3px solid var(--a
           <p>Meal break requirements, rest break mandates by shift length, and premium pay penalties for missed breaks. Built for the wage claim that hasn't been filed yet.</p>
           <div class="wb-foot">
             <span class="wb-price">$39</span>
-            <a href="#buy-meal-rest-breaks" class="wb-cta">Get this Workbook →</a>
+            <a href="#" class="wb-cta" onclick="openWaitlist('P6 Meal &amp; Rest Breaks'); return false;">Join the waitlist →</a>
           </div>
+          <div class="launch-note">Launching June 2026</div>
         </div>
       </article>
 
@@ -431,8 +449,9 @@ footer{background:var(--navy-d);padding:48px 0 32px;border-top:3px solid var(--a
           <p>Active jurisdictions — cities and states covered — advance notice windows, posting rules, and predictability pay owed when schedules change.</p>
           <div class="wb-foot">
             <span class="wb-price">$39</span>
-            <a href="#buy-predictive-scheduling" class="wb-cta">Get this Workbook →</a>
+            <a href="#" class="wb-cta" onclick="openWaitlist('P7 Predictive Scheduling'); return false;">Join the waitlist →</a>
           </div>
+          <div class="launch-note">Launching June 2026</div>
         </div>
       </article>
 
@@ -444,8 +463,9 @@ footer{background:var(--navy-d);padding:48px 0 32px;border-top:3px solid var(--a
           <p>Filing deadlines and portals for all 50 states, multi-state hire rules and election guidance, plus required data fields beyond the federal W-4.</p>
           <div class="wb-foot">
             <span class="wb-price">$39</span>
-            <a href="#buy-new-hire-reporting" class="wb-cta">Get this Workbook →</a>
+            <a href="#" class="wb-cta" onclick="openWaitlist('P8 New Hire Reporting'); return false;">Join the waitlist →</a>
           </div>
+          <div class="launch-note">Launching June 2026</div>
         </div>
       </article>
 
@@ -457,8 +477,9 @@ footer{background:var(--navy-d);padding:48px 0 32px;border-top:3px solid var(--a
           <p>State income tax rates for all 50 states + DC, garnishment limits and processing fees by state, and checklists for registration, processing, and recordkeeping.</p>
           <div class="wb-foot">
             <span class="wb-price">$39</span>
-            <a href="#buy-payroll-tax-garnishment" class="wb-cta">Get this Workbook →</a>
+            <a href="#" class="wb-cta" onclick="openWaitlist('P9 Payroll Tax &amp; Garnishment'); return false;">Join the waitlist →</a>
           </div>
+          <div class="launch-note">Launching June 2026</div>
         </div>
       </article>
 
@@ -541,7 +562,7 @@ footer{background:var(--navy-d);padding:48px 0 32px;border-top:3px solid var(--a
         <h5>Shop</h5>
         <a href="#bundles">Bundles</a>
         <a href="#workbooks">Individual workbooks</a>
-        <a href="#buy-complete-catalog">Complete Catalog</a>
+        <a href="#bundles">Complete Catalog</a>
       </div>
       <div class="footer-col">
         <h5>Company</h5>
@@ -558,5 +579,6 @@ footer{background:var(--navy-d);padding:48px 0 32px;border-top:3px solid var(--a
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/assets/waitlist.js" defer></script>
+</body>
 </html>

@@ -143,6 +143,7 @@ footer.site .foot-links a:hover{color:var(--amber)}
   section.related .rel-grid{grid-template-columns:1fr}
 }</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"Delaware HR Compliance Reference Library","description":"Delaware employment law compliance for HR and payroll professionals — final pay deadlines, paid leave, pay transparency, garnishment rules, and more. Source-cited, updated monthly.","url":"https://arbiterhr.com/states/delaware"}</script>
+<link rel="stylesheet" href="/assets/waitlist.css">
 </head>
 <body>
 <nav class="site">
@@ -232,7 +233,7 @@ footer.site .foot-links a:hover{color:var(--amber)}
     <div class="lure-side">
       <div class="price">$129</div>
       <p class="desc">Instant download — Excel + Google Sheets — free monthly updates forever.</p>
-      <a class="lure-cta" href="https://arbiterhr.gumroad.com/l/payrolladminessentials">Get Payroll Admin Bundle &rarr;</a>
+      <a class="lure-cta" href="#" onclick="openWaitlist('Payroll Admin Bundle'); return false;">Join the waitlist →</a>
     </div>
   </div>
 </section>
@@ -276,4 +277,5 @@ document.querySelectorAll('#nav-links a').forEach(a=>{
   a.addEventListener('click',()=>document.getElementById('nav-links').classList.remove('on'));
 });
 </script>
+<script src="/assets/waitlist.js" defer></script>
 </body></html>

@@ -143,6 +143,7 @@ footer.site .foot-links a:hover{color:var(--amber)}
   section.related .rel-grid{grid-template-columns:1fr}
 }</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"Non-Compete compliance reference","description":"State-by-state non-compete compliance rules for HR and payroll teams. Cited from primary sources, updated monthly, every state covered.","url":"https://arbiterhr.com/topics/non-compete"}</script>
+<link rel="stylesheet" href="/assets/waitlist.css">
 </head>
 <body>
 <nav class="site">
@@ -221,8 +222,8 @@ footer.site .foot-links a:hover{color:var(--amber)}
       <div class="lure-side">
         <div class="price">$39</div>
         <p class="desc">Excel + Google Sheets &middot; instant download &middot; free monthly updates.</p>
-        <a class="lure-cta" href="https://arbiterhr.gumroad.com/l/non-compete-laws-by-state">Get the Non-Compete &rarr;</a>
-        <a class="lure-secondary" href="https://arbiterhr.gumroad.com/l/hrgeneralistessentials">Or get the HR Generalist Bundle (4 workbooks, $129) &rarr;</a>
+        <a class="lure-cta" href="#" onclick="openWaitlist('P5 Non-Compete'); return false;">Join the waitlist →</a>
+        <a class="lure-secondary" href="#" onclick="openWaitlist('HR Generalist Bundle'); return false;">Or get the HR Generalist Bundle (4 workbooks, $129) &rarr;</a>
       </div>
     </div>
   </section>
@@ -266,4 +267,5 @@ document.querySelectorAll('#nav-links a').forEach(a=>{
   a.addEventListener('click',()=>document.getElementById('nav-links').classList.remove('on'));
 });
 </script>
+<script src="/assets/waitlist.js" defer></script>
 </body></html>

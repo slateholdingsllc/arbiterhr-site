@@ -143,6 +143,7 @@ footer.site .foot-links a:hover{color:var(--amber)}
   section.related .rel-grid{grid-template-columns:1fr}
 }</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"New Mexico HR Compliance Reference Library","description":"New Mexico employment law compliance for HR and payroll professionals — final pay deadlines, paid leave, pay transparency, garnishment rules, and more. Source-cited, updated monthly.","url":"https://arbiterhr.com/states/new-mexico"}</script>
+<link rel="stylesheet" href="/assets/waitlist.css">
 </head>
 <body>
 <nav class="site">
@@ -225,12 +226,12 @@ footer.site .foot-links a:hover{color:var(--amber)}
   <div class="cards">
     <div class="card" style="background:var(--navy);color:#fff;border-color:rgba(255,255,255,.12)">
     <div class="meta" style="color:rgba(255,255,255,.6)"><span style="color:var(--amber);font-weight:700">$129</span> <span>Payroll Admin Bundle</span></div>
-    <h3 style="color:#fff"><a href="https://arbiterhr.gumroad.com/l/payrolladminessentials" style="color:#fff">Payroll Admin Bundle &rarr;</a></h3>
+    <h3 style="color:#fff"><a href="#" onclick="openWaitlist('Payroll Admin Bundle'); return false;" style="color:#fff">Payroll Admin Bundle &rarr;</a></h3>
     <p class="summary" style="color:rgba(255,255,255,.75)">Final Pay, Paid Leave, Meal &amp; Rest, Payroll Tax &amp; Garnishment.</p>
   </div>
     <div class="card" style="background:var(--navy);color:#fff;border-color:rgba(255,255,255,.12)">
     <div class="meta" style="color:rgba(255,255,255,.6)"><span style="color:var(--amber);font-weight:700">$129</span> <span>HR Generalist Bundle</span></div>
-    <h3 style="color:#fff"><a href="https://arbiterhr.gumroad.com/l/hrgeneralistessentials" style="color:#fff">HR Generalist Bundle &rarr;</a></h3>
+    <h3 style="color:#fff"><a href="#" onclick="openWaitlist('HR Generalist Bundle'); return false;" style="color:#fff">HR Generalist Bundle &rarr;</a></h3>
     <p class="summary" style="color:rgba(255,255,255,.75)">Pay Transparency, Background Checks, Non-Compete, New Hire Reporting.</p>
   </div>
   </div>
@@ -280,4 +281,5 @@ document.querySelectorAll('#nav-links a').forEach(a=>{
   a.addEventListener('click',()=>document.getElementById('nav-links').classList.remove('on'));
 });
 </script>
+<script src="/assets/waitlist.js" defer></script>
 </body></html>
