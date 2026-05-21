@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://arbiterhr.com/sitemap.xml
+Sitemap: https://www.arbiterhr.com/sitemap.xml
